@@ -50,7 +50,7 @@ func (x HotRegionType) String() string {
 	return proto.EnumName(HotRegionType_name, int32(x))
 }
 func (HotRegionType) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_hotregionhistory_5d0f6238d14b84bf, []int{0}
+	return fileDescriptor_hotregionhistory_9e270f42feef3940, []int{0}
 }
 
 type SearchHotRegionsRequest struct {
@@ -59,14 +59,14 @@ type SearchHotRegionsRequest struct {
 	RegionId             []uint64      `protobuf:"varint,3,rep,packed,name=region_id,json=regionId" json:"region_id,omitempty"`
 	StoreId              []uint64      `protobuf:"varint,4,rep,packed,name=store_id,json=storeId" json:"store_id,omitempty"`
 	HotRegionType        HotRegionType `protobuf:"varint,5,opt,name=hot_region_type,json=hotRegionType,proto3,enum=hotregionhistory.HotRegionType" json:"hot_region_type,omitempty"`
-	LowHotDegree         float32       `protobuf:"fixed32,6,opt,name=low_hot_degree,json=lowHotDegree,proto3" json:"low_hot_degree,omitempty"`
-	HighHotDegree        float32       `protobuf:"fixed32,7,opt,name=high_hot_degree,json=highHotDegree,proto3" json:"high_hot_degree,omitempty"`
-	LowFlowBytes         float32       `protobuf:"fixed32,8,opt,name=low_flow_bytes,json=lowFlowBytes,proto3" json:"low_flow_bytes,omitempty"`
-	HighFlowBytes        float32       `protobuf:"fixed32,9,opt,name=high_flow_bytes,json=highFlowBytes,proto3" json:"high_flow_bytes,omitempty"`
-	LowKeyRate           float32       `protobuf:"fixed32,10,opt,name=low_key_rate,json=lowKeyRate,proto3" json:"low_key_rate,omitempty"`
-	HighKeyRate          float32       `protobuf:"fixed32,11,opt,name=high_key_rate,json=highKeyRate,proto3" json:"high_key_rate,omitempty"`
-	LowQueryRate         float32       `protobuf:"fixed32,12,opt,name=low_query_rate,json=lowQueryRate,proto3" json:"low_query_rate,omitempty"`
-	HighQueryRate        float32       `protobuf:"fixed32,13,opt,name=high_query_rate,json=highQueryRate,proto3" json:"high_query_rate,omitempty"`
+	LowHotDegree         int64         `protobuf:"varint,6,opt,name=low_hot_degree,json=lowHotDegree,proto3" json:"low_hot_degree,omitempty"`
+	HighHotDegree        int64         `protobuf:"varint,7,opt,name=high_hot_degree,json=highHotDegree,proto3" json:"high_hot_degree,omitempty"`
+	LowFlowBytes         float64       `protobuf:"fixed64,8,opt,name=low_flow_bytes,json=lowFlowBytes,proto3" json:"low_flow_bytes,omitempty"`
+	HighFlowBytes        float64       `protobuf:"fixed64,9,opt,name=high_flow_bytes,json=highFlowBytes,proto3" json:"high_flow_bytes,omitempty"`
+	LowKeyRate           float64       `protobuf:"fixed64,10,opt,name=low_key_rate,json=lowKeyRate,proto3" json:"low_key_rate,omitempty"`
+	HighKeyRate          float64       `protobuf:"fixed64,11,opt,name=high_key_rate,json=highKeyRate,proto3" json:"high_key_rate,omitempty"`
+	LowQueryRate         float64       `protobuf:"fixed64,12,opt,name=low_query_rate,json=lowQueryRate,proto3" json:"low_query_rate,omitempty"`
+	HighQueryRate        float64       `protobuf:"fixed64,13,opt,name=high_query_rate,json=highQueryRate,proto3" json:"high_query_rate,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
 	XXX_unrecognized     []byte        `json:"-"`
 	XXX_sizecache        int32         `json:"-"`
@@ -76,7 +76,7 @@ func (m *SearchHotRegionsRequest) Reset()         { *m = SearchHotRegionsRequest
 func (m *SearchHotRegionsRequest) String() string { return proto.CompactTextString(m) }
 func (*SearchHotRegionsRequest) ProtoMessage()    {}
 func (*SearchHotRegionsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_hotregionhistory_5d0f6238d14b84bf, []int{0}
+	return fileDescriptor_hotregionhistory_9e270f42feef3940, []int{0}
 }
 func (m *SearchHotRegionsRequest) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -140,56 +140,56 @@ func (m *SearchHotRegionsRequest) GetHotRegionType() HotRegionType {
 	return HotRegionType_Read
 }
 
-func (m *SearchHotRegionsRequest) GetLowHotDegree() float32 {
+func (m *SearchHotRegionsRequest) GetLowHotDegree() int64 {
 	if m != nil {
 		return m.LowHotDegree
 	}
 	return 0
 }
 
-func (m *SearchHotRegionsRequest) GetHighHotDegree() float32 {
+func (m *SearchHotRegionsRequest) GetHighHotDegree() int64 {
 	if m != nil {
 		return m.HighHotDegree
 	}
 	return 0
 }
 
-func (m *SearchHotRegionsRequest) GetLowFlowBytes() float32 {
+func (m *SearchHotRegionsRequest) GetLowFlowBytes() float64 {
 	if m != nil {
 		return m.LowFlowBytes
 	}
 	return 0
 }
 
-func (m *SearchHotRegionsRequest) GetHighFlowBytes() float32 {
+func (m *SearchHotRegionsRequest) GetHighFlowBytes() float64 {
 	if m != nil {
 		return m.HighFlowBytes
 	}
 	return 0
 }
 
-func (m *SearchHotRegionsRequest) GetLowKeyRate() float32 {
+func (m *SearchHotRegionsRequest) GetLowKeyRate() float64 {
 	if m != nil {
 		return m.LowKeyRate
 	}
 	return 0
 }
 
-func (m *SearchHotRegionsRequest) GetHighKeyRate() float32 {
+func (m *SearchHotRegionsRequest) GetHighKeyRate() float64 {
 	if m != nil {
 		return m.HighKeyRate
 	}
 	return 0
 }
 
-func (m *SearchHotRegionsRequest) GetLowQueryRate() float32 {
+func (m *SearchHotRegionsRequest) GetLowQueryRate() float64 {
 	if m != nil {
 		return m.LowQueryRate
 	}
 	return 0
 }
 
-func (m *SearchHotRegionsRequest) GetHighQueryRate() float32 {
+func (m *SearchHotRegionsRequest) GetHighQueryRate() float64 {
 	if m != nil {
 		return m.HighQueryRate
 	}
@@ -207,7 +207,7 @@ func (m *SearchHotRegionsResponse) Reset()         { *m = SearchHotRegionsRespon
 func (m *SearchHotRegionsResponse) String() string { return proto.CompactTextString(m) }
 func (*SearchHotRegionsResponse) ProtoMessage()    {}
 func (*SearchHotRegionsResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_hotregionhistory_5d0f6238d14b84bf, []int{1}
+	return fileDescriptor_hotregionhistory_9e270f42feef3940, []int{1}
 }
 func (m *SearchHotRegionsResponse) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -248,10 +248,10 @@ type HotRegionsMessages struct {
 	RegionId             uint64        `protobuf:"varint,2,opt,name=region_id,json=regionId,proto3" json:"region_id,omitempty"`
 	StoreId              uint64        `protobuf:"varint,3,opt,name=store_id,json=storeId,proto3" json:"store_id,omitempty"`
 	HotRegionType        HotRegionType `protobuf:"varint,4,opt,name=hot_region_type,json=hotRegionType,proto3,enum=hotregionhistory.HotRegionType" json:"hot_region_type,omitempty"`
-	HotDegree            float32       `protobuf:"fixed32,5,opt,name=hot_degree,json=hotDegree,proto3" json:"hot_degree,omitempty"`
-	FlowBytes            float32       `protobuf:"fixed32,6,opt,name=flow_bytes,json=flowBytes,proto3" json:"flow_bytes,omitempty"`
-	KeyRate              float32       `protobuf:"fixed32,7,opt,name=key_rate,json=keyRate,proto3" json:"key_rate,omitempty"`
-	QueryRate            float32       `protobuf:"fixed32,8,opt,name=query_rate,json=queryRate,proto3" json:"query_rate,omitempty"`
+	HotDegree            int64         `protobuf:"varint,5,opt,name=hot_degree,json=hotDegree,proto3" json:"hot_degree,omitempty"`
+	FlowBytes            float64       `protobuf:"fixed64,6,opt,name=flow_bytes,json=flowBytes,proto3" json:"flow_bytes,omitempty"`
+	KeyRate              float64       `protobuf:"fixed64,7,opt,name=key_rate,json=keyRate,proto3" json:"key_rate,omitempty"`
+	QueryRate            float64       `protobuf:"fixed64,8,opt,name=query_rate,json=queryRate,proto3" json:"query_rate,omitempty"`
 	StartKey             []byte        `protobuf:"bytes,9,opt,name=start_key,json=startKey,proto3" json:"start_key,omitempty"`
 	EndKey               []byte        `protobuf:"bytes,10,opt,name=end_key,json=endKey,proto3" json:"end_key,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
@@ -263,7 +263,7 @@ func (m *HotRegionsMessages) Reset()         { *m = HotRegionsMessages{} }
 func (m *HotRegionsMessages) String() string { return proto.CompactTextString(m) }
 func (*HotRegionsMessages) ProtoMessage()    {}
 func (*HotRegionsMessages) Descriptor() ([]byte, []int) {
-	return fileDescriptor_hotregionhistory_5d0f6238d14b84bf, []int{2}
+	return fileDescriptor_hotregionhistory_9e270f42feef3940, []int{2}
 }
 func (m *HotRegionsMessages) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -320,28 +320,28 @@ func (m *HotRegionsMessages) GetHotRegionType() HotRegionType {
 	return HotRegionType_Read
 }
 
-func (m *HotRegionsMessages) GetHotDegree() float32 {
+func (m *HotRegionsMessages) GetHotDegree() int64 {
 	if m != nil {
 		return m.HotDegree
 	}
 	return 0
 }
 
-func (m *HotRegionsMessages) GetFlowBytes() float32 {
+func (m *HotRegionsMessages) GetFlowBytes() float64 {
 	if m != nil {
 		return m.FlowBytes
 	}
 	return 0
 }
 
-func (m *HotRegionsMessages) GetKeyRate() float32 {
+func (m *HotRegionsMessages) GetKeyRate() float64 {
 	if m != nil {
 		return m.KeyRate
 	}
 	return 0
 }
 
-func (m *HotRegionsMessages) GetQueryRate() float32 {
+func (m *HotRegionsMessages) GetQueryRate() float64 {
 	if m != nil {
 		return m.QueryRate
 	}
@@ -533,52 +533,50 @@ func (m *SearchHotRegionsRequest) MarshalTo(dAtA []byte) (int, error) {
 		i = encodeVarintHotregionhistory(dAtA, i, uint64(m.HotRegionType))
 	}
 	if m.LowHotDegree != 0 {
-		dAtA[i] = 0x35
+		dAtA[i] = 0x30
 		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.LowHotDegree))))
-		i += 4
+		i = encodeVarintHotregionhistory(dAtA, i, uint64(m.LowHotDegree))
 	}
 	if m.HighHotDegree != 0 {
-		dAtA[i] = 0x3d
+		dAtA[i] = 0x38
 		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.HighHotDegree))))
-		i += 4
+		i = encodeVarintHotregionhistory(dAtA, i, uint64(m.HighHotDegree))
 	}
 	if m.LowFlowBytes != 0 {
-		dAtA[i] = 0x45
+		dAtA[i] = 0x41
 		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.LowFlowBytes))))
-		i += 4
+		encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(math.Float64bits(float64(m.LowFlowBytes))))
+		i += 8
 	}
 	if m.HighFlowBytes != 0 {
-		dAtA[i] = 0x4d
+		dAtA[i] = 0x49
 		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.HighFlowBytes))))
-		i += 4
+		encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(math.Float64bits(float64(m.HighFlowBytes))))
+		i += 8
 	}
 	if m.LowKeyRate != 0 {
-		dAtA[i] = 0x55
+		dAtA[i] = 0x51
 		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.LowKeyRate))))
-		i += 4
+		encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(math.Float64bits(float64(m.LowKeyRate))))
+		i += 8
 	}
 	if m.HighKeyRate != 0 {
-		dAtA[i] = 0x5d
+		dAtA[i] = 0x59
 		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.HighKeyRate))))
-		i += 4
+		encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(math.Float64bits(float64(m.HighKeyRate))))
+		i += 8
 	}
 	if m.LowQueryRate != 0 {
-		dAtA[i] = 0x65
+		dAtA[i] = 0x61
 		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.LowQueryRate))))
-		i += 4
+		encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(math.Float64bits(float64(m.LowQueryRate))))
+		i += 8
 	}
 	if m.HighQueryRate != 0 {
-		dAtA[i] = 0x6d
+		dAtA[i] = 0x69
 		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.HighQueryRate))))
-		i += 4
+		encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(math.Float64bits(float64(m.HighQueryRate))))
+		i += 8
 	}
 	if m.XXX_unrecognized != nil {
 		i += copy(dAtA[i:], m.XXX_unrecognized)
@@ -655,28 +653,27 @@ func (m *HotRegionsMessages) MarshalTo(dAtA []byte) (int, error) {
 		i = encodeVarintHotregionhistory(dAtA, i, uint64(m.HotRegionType))
 	}
 	if m.HotDegree != 0 {
-		dAtA[i] = 0x2d
+		dAtA[i] = 0x28
 		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.HotDegree))))
-		i += 4
+		i = encodeVarintHotregionhistory(dAtA, i, uint64(m.HotDegree))
 	}
 	if m.FlowBytes != 0 {
-		dAtA[i] = 0x35
+		dAtA[i] = 0x31
 		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.FlowBytes))))
-		i += 4
+		encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(math.Float64bits(float64(m.FlowBytes))))
+		i += 8
 	}
 	if m.KeyRate != 0 {
-		dAtA[i] = 0x3d
+		dAtA[i] = 0x39
 		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.KeyRate))))
-		i += 4
+		encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(math.Float64bits(float64(m.KeyRate))))
+		i += 8
 	}
 	if m.QueryRate != 0 {
-		dAtA[i] = 0x45
+		dAtA[i] = 0x41
 		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.QueryRate))))
-		i += 4
+		encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(math.Float64bits(float64(m.QueryRate))))
+		i += 8
 	}
 	if len(m.StartKey) > 0 {
 		dAtA[i] = 0x4a
@@ -732,28 +729,28 @@ func (m *SearchHotRegionsRequest) Size() (n int) {
 		n += 1 + sovHotregionhistory(uint64(m.HotRegionType))
 	}
 	if m.LowHotDegree != 0 {
-		n += 5
+		n += 1 + sovHotregionhistory(uint64(m.LowHotDegree))
 	}
 	if m.HighHotDegree != 0 {
-		n += 5
+		n += 1 + sovHotregionhistory(uint64(m.HighHotDegree))
 	}
 	if m.LowFlowBytes != 0 {
-		n += 5
+		n += 9
 	}
 	if m.HighFlowBytes != 0 {
-		n += 5
+		n += 9
 	}
 	if m.LowKeyRate != 0 {
-		n += 5
+		n += 9
 	}
 	if m.HighKeyRate != 0 {
-		n += 5
+		n += 9
 	}
 	if m.LowQueryRate != 0 {
-		n += 5
+		n += 9
 	}
 	if m.HighQueryRate != 0 {
-		n += 5
+		n += 9
 	}
 	if m.XXX_unrecognized != nil {
 		n += len(m.XXX_unrecognized)
@@ -792,16 +789,16 @@ func (m *HotRegionsMessages) Size() (n int) {
 		n += 1 + sovHotregionhistory(uint64(m.HotRegionType))
 	}
 	if m.HotDegree != 0 {
-		n += 5
+		n += 1 + sovHotregionhistory(uint64(m.HotDegree))
 	}
 	if m.FlowBytes != 0 {
-		n += 5
+		n += 9
 	}
 	if m.KeyRate != 0 {
-		n += 5
+		n += 9
 	}
 	if m.QueryRate != 0 {
-		n += 5
+		n += 9
 	}
 	l = len(m.StartKey)
 	if l > 0 {
@@ -1041,93 +1038,109 @@ func (m *SearchHotRegionsRequest) Unmarshal(dAtA []byte) error {
 				}
 			}
 		case 6:
-			if wireType != 5 {
+			if wireType != 0 {
 				return fmt.Errorf("proto: wrong wireType = %d for field LowHotDegree", wireType)
 			}
-			var v uint32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
+			m.LowHotDegree = 0
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowHotregionhistory
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				m.LowHotDegree |= (int64(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
 			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.LowHotDegree = float32(math.Float32frombits(v))
 		case 7:
-			if wireType != 5 {
+			if wireType != 0 {
 				return fmt.Errorf("proto: wrong wireType = %d for field HighHotDegree", wireType)
 			}
-			var v uint32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
+			m.HighHotDegree = 0
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowHotregionhistory
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				m.HighHotDegree |= (int64(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
 			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.HighHotDegree = float32(math.Float32frombits(v))
 		case 8:
-			if wireType != 5 {
+			if wireType != 1 {
 				return fmt.Errorf("proto: wrong wireType = %d for field LowFlowBytes", wireType)
 			}
-			var v uint32
-			if (iNdEx + 4) > l {
+			var v uint64
+			if (iNdEx + 8) > l {
 				return io.ErrUnexpectedEOF
 			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.LowFlowBytes = float32(math.Float32frombits(v))
+			v = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
+			iNdEx += 8
+			m.LowFlowBytes = float64(math.Float64frombits(v))
 		case 9:
-			if wireType != 5 {
+			if wireType != 1 {
 				return fmt.Errorf("proto: wrong wireType = %d for field HighFlowBytes", wireType)
 			}
-			var v uint32
-			if (iNdEx + 4) > l {
+			var v uint64
+			if (iNdEx + 8) > l {
 				return io.ErrUnexpectedEOF
 			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.HighFlowBytes = float32(math.Float32frombits(v))
+			v = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
+			iNdEx += 8
+			m.HighFlowBytes = float64(math.Float64frombits(v))
 		case 10:
-			if wireType != 5 {
+			if wireType != 1 {
 				return fmt.Errorf("proto: wrong wireType = %d for field LowKeyRate", wireType)
 			}
-			var v uint32
-			if (iNdEx + 4) > l {
+			var v uint64
+			if (iNdEx + 8) > l {
 				return io.ErrUnexpectedEOF
 			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.LowKeyRate = float32(math.Float32frombits(v))
+			v = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
+			iNdEx += 8
+			m.LowKeyRate = float64(math.Float64frombits(v))
 		case 11:
-			if wireType != 5 {
+			if wireType != 1 {
 				return fmt.Errorf("proto: wrong wireType = %d for field HighKeyRate", wireType)
 			}
-			var v uint32
-			if (iNdEx + 4) > l {
+			var v uint64
+			if (iNdEx + 8) > l {
 				return io.ErrUnexpectedEOF
 			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.HighKeyRate = float32(math.Float32frombits(v))
+			v = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
+			iNdEx += 8
+			m.HighKeyRate = float64(math.Float64frombits(v))
 		case 12:
-			if wireType != 5 {
+			if wireType != 1 {
 				return fmt.Errorf("proto: wrong wireType = %d for field LowQueryRate", wireType)
 			}
-			var v uint32
-			if (iNdEx + 4) > l {
+			var v uint64
+			if (iNdEx + 8) > l {
 				return io.ErrUnexpectedEOF
 			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.LowQueryRate = float32(math.Float32frombits(v))
+			v = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
+			iNdEx += 8
+			m.LowQueryRate = float64(math.Float64frombits(v))
 		case 13:
-			if wireType != 5 {
+			if wireType != 1 {
 				return fmt.Errorf("proto: wrong wireType = %d for field HighQueryRate", wireType)
 			}
-			var v uint32
-			if (iNdEx + 4) > l {
+			var v uint64
+			if (iNdEx + 8) > l {
 				return io.ErrUnexpectedEOF
 			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.HighQueryRate = float32(math.Float32frombits(v))
+			v = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
+			iNdEx += 8
+			m.HighQueryRate = float64(math.Float64frombits(v))
 		default:
 			iNdEx = preIndex
 			skippy, err := skipHotregionhistory(dAtA[iNdEx:])
@@ -1338,49 +1351,57 @@ func (m *HotRegionsMessages) Unmarshal(dAtA []byte) error {
 				}
 			}
 		case 5:
-			if wireType != 5 {
+			if wireType != 0 {
 				return fmt.Errorf("proto: wrong wireType = %d for field HotDegree", wireType)
 			}
-			var v uint32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
+			m.HotDegree = 0
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowHotregionhistory
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				m.HotDegree |= (int64(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
 			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.HotDegree = float32(math.Float32frombits(v))
 		case 6:
-			if wireType != 5 {
+			if wireType != 1 {
 				return fmt.Errorf("proto: wrong wireType = %d for field FlowBytes", wireType)
 			}
-			var v uint32
-			if (iNdEx + 4) > l {
+			var v uint64
+			if (iNdEx + 8) > l {
 				return io.ErrUnexpectedEOF
 			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.FlowBytes = float32(math.Float32frombits(v))
+			v = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
+			iNdEx += 8
+			m.FlowBytes = float64(math.Float64frombits(v))
 		case 7:
-			if wireType != 5 {
+			if wireType != 1 {
 				return fmt.Errorf("proto: wrong wireType = %d for field KeyRate", wireType)
 			}
-			var v uint32
-			if (iNdEx + 4) > l {
+			var v uint64
+			if (iNdEx + 8) > l {
 				return io.ErrUnexpectedEOF
 			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.KeyRate = float32(math.Float32frombits(v))
+			v = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
+			iNdEx += 8
+			m.KeyRate = float64(math.Float64frombits(v))
 		case 8:
-			if wireType != 5 {
+			if wireType != 1 {
 				return fmt.Errorf("proto: wrong wireType = %d for field QueryRate", wireType)
 			}
-			var v uint32
-			if (iNdEx + 4) > l {
+			var v uint64
+			if (iNdEx + 8) > l {
 				return io.ErrUnexpectedEOF
 			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.QueryRate = float32(math.Float32frombits(v))
+			v = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
+			iNdEx += 8
+			m.QueryRate = float64(math.Float64frombits(v))
 		case 9:
 			if wireType != 2 {
 				return fmt.Errorf("proto: wrong wireType = %d for field StartKey", wireType)
@@ -1571,46 +1592,46 @@ var (
 )
 
 func init() {
-	proto.RegisterFile("hotregionhistory.proto", fileDescriptor_hotregionhistory_5d0f6238d14b84bf)
+	proto.RegisterFile("hotregionhistory.proto", fileDescriptor_hotregionhistory_9e270f42feef3940)
 }
 
-var fileDescriptor_hotregionhistory_5d0f6238d14b84bf = []byte{
-	// 581 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x9c, 0x94, 0xcd, 0x6e, 0xd3, 0x5e,
-	0x10, 0xc5, 0xeb, 0xe6, 0xcb, 0x9e, 0x24, 0x6d, 0xfe, 0x57, 0x7f, 0x51, 0xb7, 0x55, 0x52, 0xcb,
-	0x8a, 0x50, 0xe8, 0x22, 0xa0, 0xf0, 0x02, 0xa8, 0x42, 0x90, 0x2a, 0x62, 0x81, 0xa9, 0xc4, 0x06,
-	0xc9, 0x72, 0xf1, 0xd4, 0xb6, 0xf2, 0x71, 0x13, 0xdf, 0x9b, 0x46, 0xde, 0xf7, 0x21, 0x78, 0x24,
-	0x96, 0x3c, 0x02, 0x0a, 0x3c, 0x08, 0xba, 0x63, 0xd7, 0x36, 0x44, 0xad, 0x10, 0x9b, 0x24, 0x3e,
-	0xe7, 0x37, 0x93, 0xf1, 0x9d, 0x63, 0xc3, 0x93, 0x90, 0xcb, 0x18, 0x83, 0x88, 0x2f, 0xc2, 0x48,
-	0x48, 0x1e, 0x27, 0xc3, 0x65, 0xcc, 0x25, 0x67, 0x9d, 0x3f, 0xf5, 0x93, 0xff, 0x03, 0x1e, 0x70,
-	0x32, 0x9f, 0xab, 0x5f, 0x29, 0x67, 0xdf, 0x55, 0xe1, 0xe8, 0x03, 0x7a, 0xf1, 0xe7, 0x70, 0xcc,
-	0xa5, 0x43, 0x05, 0xc2, 0xc1, 0xd5, 0x1a, 0x85, 0x64, 0x5d, 0x00, 0x21, 0xbd, 0x58, 0xba, 0x32,
-	0x9a, 0xa3, 0xa9, 0x59, 0xda, 0xa0, 0xe2, 0x18, 0xa4, 0x5c, 0x45, 0x73, 0x64, 0xc7, 0xa0, 0xe3,
-	0xc2, 0x4f, 0xcd, 0x7d, 0x32, 0x1b, 0xb8, 0xf0, 0xc9, 0x3a, 0x05, 0x23, 0xfd, 0x73, 0x37, 0xf2,
-	0xcd, 0x8a, 0x55, 0x19, 0x54, 0x1d, 0x3d, 0x15, 0x2e, 0x7d, 0x55, 0xa7, 0x26, 0x42, 0xe5, 0x55,
-	0xc9, 0x6b, 0xd0, 0xf5, 0xa5, 0xcf, 0xde, 0xc2, 0x61, 0xc8, 0xa5, 0x9b, 0xd5, 0xca, 0x64, 0x89,
-	0x66, 0xcd, 0xd2, 0x06, 0x07, 0xa3, 0xb3, 0xe1, 0xce, 0x7d, 0xe6, 0xf3, 0x5e, 0x25, 0x4b, 0x74,
-	0xda, 0x61, 0xf9, 0x92, 0xf5, 0xe1, 0x60, 0xc6, 0x37, 0xae, 0x6a, 0xe6, 0x63, 0x10, 0x23, 0x9a,
-	0x75, 0x4b, 0x1b, 0xec, 0x3b, 0xad, 0x19, 0xdf, 0x8c, 0xb9, 0x7c, 0x4d, 0x1a, 0x7b, 0x0a, 0x87,
-	0x61, 0x14, 0x84, 0x65, 0xac, 0x41, 0x58, 0x5b, 0xc9, 0x05, 0x97, 0x75, 0xbb, 0x51, 0x1f, 0xd7,
-	0x89, 0x44, 0x61, 0xea, 0x79, 0xb7, 0x37, 0x33, 0xbe, 0xb9, 0x50, 0x5a, 0xde, 0xad, 0x84, 0x19,
-	0x45, 0xb7, 0x82, 0xb3, 0x40, 0xd5, 0xb9, 0x53, 0x4c, 0xdc, 0xd8, 0x93, 0x68, 0x02, 0x41, 0x30,
-	0xe3, 0x9b, 0x09, 0x26, 0x8e, 0x27, 0x91, 0xd9, 0x40, 0x25, 0x05, 0xd2, 0x24, 0xa4, 0xa9, 0xc4,
-	0x7b, 0x26, 0x9b, 0x69, 0xb5, 0xc6, 0x38, 0x83, 0x5a, 0xf9, 0x4c, 0xef, 0x95, 0x48, 0xd4, 0xfd,
-	0x4c, 0x25, 0xac, 0x5d, 0xcc, 0x94, 0x73, 0xf6, 0x27, 0x30, 0x77, 0x53, 0x20, 0x96, 0x7c, 0x21,
-	0x90, 0xbd, 0x02, 0x7d, 0x8e, 0x42, 0x78, 0x01, 0x0a, 0x53, 0xb3, 0x2a, 0x83, 0xe6, 0xa8, 0xff,
-	0xc8, 0x36, 0xc4, 0xbb, 0x8c, 0x75, 0xf2, 0x2a, 0xfb, 0xe7, 0x3e, 0xb0, 0x5d, 0x80, 0x9d, 0x41,
-	0x73, 0xbd, 0xf4, 0x3d, 0x89, 0xe5, 0x80, 0x41, 0x2a, 0xed, 0xc6, 0x48, 0x45, 0xec, 0xa1, 0x18,
-	0x55, 0xc8, 0x7b, 0x2c, 0x46, 0xd5, 0x7f, 0x8a, 0x51, 0x17, 0xa0, 0x94, 0x8d, 0x1a, 0x9d, 0x9c,
-	0x11, 0xe6, 0xb9, 0xe8, 0x02, 0x94, 0x96, 0x9d, 0x26, 0xcc, 0xb8, 0xc9, 0x17, 0x7d, 0x0c, 0x7a,
-	0xbe, 0xc1, 0x34, 0x57, 0x8d, 0x69, 0xb6, 0xbd, 0x2e, 0x40, 0x69, 0x25, 0x69, 0x9a, 0x8c, 0x55,
-	0xbe, 0xb6, 0x53, 0x48, 0x9f, 0x33, 0x95, 0x00, 0x0a, 0x51, 0xcb, 0xd1, 0x49, 0x98, 0x60, 0xc2,
-	0x8e, 0x40, 0x3d, 0x67, 0x64, 0x01, 0x59, 0x75, 0x5c, 0xf8, 0x13, 0x4c, 0xce, 0xfb, 0xd0, 0xfe,
-	0xed, 0x6e, 0x98, 0x0e, 0x55, 0x07, 0x3d, 0xbf, 0xb3, 0xc7, 0x0c, 0xa8, 0x7d, 0x8c, 0x23, 0x89,
-	0x1d, 0x6d, 0x74, 0xa7, 0xc1, 0x7f, 0xc5, 0x32, 0xc6, 0xe9, 0x31, 0x30, 0x0e, 0x4c, 0x50, 0x00,
-	0xdc, 0xe2, 0xe4, 0x04, 0x7b, 0xb6, 0x7b, 0x5e, 0x0f, 0xbc, 0x2c, 0x4e, 0xce, 0xff, 0x06, 0x4d,
-	0x13, 0x65, 0xef, 0xbd, 0xd0, 0x2e, 0xec, 0xaf, 0xdb, 0x9e, 0xf6, 0x6d, 0xdb, 0xd3, 0xbe, 0x6f,
-	0x7b, 0xda, 0x97, 0x1f, 0xbd, 0x3d, 0xe8, 0xf0, 0x38, 0x18, 0xca, 0x68, 0x7a, 0x3b, 0x9c, 0xde,
-	0xd2, 0xcb, 0xe9, 0xba, 0x4e, 0x5f, 0x2f, 0x7f, 0x05, 0x00, 0x00, 0xff, 0xff, 0xaa, 0xcb, 0xa3,
-	0x0b, 0xe5, 0x04, 0x00, 0x00,
+var fileDescriptor_hotregionhistory_9e270f42feef3940 = []byte{
+	// 584 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x9c, 0x94, 0xdf, 0x6e, 0xd3, 0x4c,
+	0x10, 0xc5, 0xbb, 0x4d, 0x9a, 0xd8, 0x93, 0xa6, 0xcd, 0xb7, 0xfa, 0x44, 0xdd, 0x56, 0x49, 0x2d,
+	0xab, 0x42, 0xa1, 0x17, 0x01, 0x95, 0x17, 0x40, 0x15, 0x82, 0x54, 0x11, 0x17, 0x98, 0x4a, 0xdc,
+	0x20, 0x59, 0x2e, 0x9e, 0xda, 0x56, 0xfe, 0x6c, 0xe2, 0xdd, 0x34, 0xf2, 0x7d, 0x1f, 0x82, 0x47,
+	0xe2, 0x92, 0x47, 0x40, 0x81, 0x07, 0x41, 0x3b, 0x76, 0x6d, 0x43, 0xd4, 0x0a, 0x71, 0x93, 0xc4,
+	0xe7, 0xfc, 0x66, 0x32, 0xde, 0x39, 0x36, 0x3c, 0x89, 0x84, 0x4a, 0x30, 0x8c, 0xc5, 0x2c, 0x8a,
+	0xa5, 0x12, 0x49, 0x3a, 0x98, 0x27, 0x42, 0x09, 0xde, 0xf9, 0x53, 0x3f, 0xfa, 0x3f, 0x14, 0xa1,
+	0x20, 0xf3, 0xb9, 0xfe, 0x95, 0x71, 0xce, 0x5d, 0x1d, 0x0e, 0x3e, 0xa0, 0x9f, 0x7c, 0x8e, 0x86,
+	0x42, 0xb9, 0x54, 0x20, 0x5d, 0x5c, 0x2c, 0x51, 0x2a, 0xde, 0x05, 0x90, 0xca, 0x4f, 0x94, 0xa7,
+	0xe2, 0x29, 0x5a, 0xcc, 0x66, 0xfd, 0x9a, 0x6b, 0x92, 0x72, 0x15, 0x4f, 0x91, 0x1f, 0x82, 0x81,
+	0xb3, 0x20, 0x33, 0xb7, 0xc9, 0x6c, 0xe2, 0x2c, 0x20, 0xeb, 0x18, 0xcc, 0xec, 0xcf, 0xbd, 0x38,
+	0xb0, 0x6a, 0x76, 0xad, 0x5f, 0x77, 0x8d, 0x4c, 0xb8, 0x0c, 0x74, 0x9d, 0x9e, 0x08, 0xb5, 0x57,
+	0x27, 0xaf, 0x49, 0xd7, 0x97, 0x01, 0x7f, 0x0b, 0xfb, 0x91, 0x50, 0x5e, 0x5e, 0xab, 0xd2, 0x39,
+	0x5a, 0x3b, 0x36, 0xeb, 0xef, 0x9d, 0x9f, 0x0c, 0x36, 0xee, 0xb3, 0x98, 0xf7, 0x2a, 0x9d, 0xa3,
+	0xdb, 0x8e, 0xaa, 0x97, 0xfc, 0x14, 0xf6, 0x26, 0x62, 0xe5, 0xe9, 0x66, 0x01, 0x86, 0x09, 0xa2,
+	0xd5, 0xa0, 0x09, 0x77, 0x27, 0x62, 0x35, 0x14, 0xea, 0x35, 0x69, 0xfc, 0x29, 0xec, 0x47, 0x71,
+	0x18, 0x55, 0xb1, 0x26, 0x61, 0x6d, 0x2d, 0x97, 0x5c, 0xde, 0xed, 0x46, 0x7f, 0x5c, 0xa7, 0x0a,
+	0xa5, 0x65, 0xd8, 0xac, 0xcf, 0xa8, 0xdb, 0x9b, 0x89, 0x58, 0x5d, 0x68, 0xad, 0xe8, 0x56, 0xc1,
+	0x4c, 0xc2, 0xa8, 0x5b, 0xc9, 0xd9, 0xa0, 0xeb, 0xbc, 0x31, 0xa6, 0x5e, 0xe2, 0x2b, 0xb4, 0x80,
+	0x20, 0x98, 0x88, 0xd5, 0x08, 0x53, 0xd7, 0x57, 0xc8, 0x1d, 0xa0, 0x92, 0x12, 0x69, 0x11, 0xd2,
+	0xd2, 0xe2, 0x3d, 0x93, 0xcf, 0xb4, 0x58, 0x62, 0x92, 0x43, 0xbb, 0xc5, 0x4c, 0xef, 0xb5, 0x48,
+	0xd4, 0xfd, 0x4c, 0x15, 0xac, 0x5d, 0xce, 0x54, 0x70, 0xce, 0x27, 0xb0, 0x36, 0x53, 0x20, 0xe7,
+	0x62, 0x26, 0x91, 0xbf, 0x02, 0x63, 0x8a, 0x52, 0xfa, 0x21, 0x4a, 0x8b, 0xd9, 0xb5, 0x7e, 0xeb,
+	0xfc, 0xf4, 0x91, 0x6d, 0xc8, 0x77, 0x39, 0xeb, 0x16, 0x55, 0xce, 0xcf, 0x6d, 0xe0, 0x9b, 0x00,
+	0x3f, 0x81, 0xd6, 0x72, 0x1e, 0xf8, 0x0a, 0xab, 0x01, 0x83, 0x4c, 0xda, 0x8c, 0x91, 0x8e, 0xd8,
+	0x43, 0x31, 0xaa, 0x91, 0xf7, 0x58, 0x8c, 0xea, 0xff, 0x14, 0xa3, 0x2e, 0x40, 0x25, 0x1b, 0x3b,
+	0xd9, 0x13, 0x10, 0x15, 0xb9, 0xe8, 0x02, 0x54, 0x96, 0xdd, 0xa0, 0x83, 0x35, 0x6f, 0x8a, 0x45,
+	0x1f, 0x82, 0x51, 0x6c, 0xb0, 0x49, 0x66, 0x73, 0x9c, 0x6f, 0xaf, 0x0b, 0x50, 0x59, 0x49, 0x96,
+	0x26, 0x73, 0x51, 0xac, 0xed, 0x18, 0xb2, 0xe7, 0x4c, 0x27, 0x80, 0x42, 0xb4, 0xeb, 0x1a, 0x24,
+	0x8c, 0x30, 0xe5, 0x07, 0xa0, 0x9f, 0x33, 0xb2, 0x80, 0xac, 0x06, 0xce, 0x82, 0x11, 0xa6, 0x67,
+	0xa7, 0xd0, 0xfe, 0xed, 0x6e, 0xb8, 0x01, 0x75, 0x17, 0xfd, 0xa0, 0xb3, 0xc5, 0x4d, 0xd8, 0xf9,
+	0x98, 0xc4, 0x0a, 0x3b, 0xec, 0xfc, 0x8e, 0xc1, 0x7f, 0xe5, 0x32, 0x86, 0xd9, 0x31, 0x70, 0x01,
+	0x5c, 0x52, 0x00, 0xbc, 0xf2, 0xe4, 0x24, 0x7f, 0xb6, 0x79, 0x5e, 0x0f, 0xbc, 0x2c, 0x8e, 0xce,
+	0xfe, 0x06, 0xcd, 0x12, 0xe5, 0x6c, 0xbd, 0x60, 0x17, 0xce, 0xd7, 0x75, 0x8f, 0x7d, 0x5b, 0xf7,
+	0xd8, 0xf7, 0x75, 0x8f, 0x7d, 0xf9, 0xd1, 0xdb, 0x82, 0x8e, 0x48, 0xc2, 0x81, 0x8a, 0xc7, 0xb7,
+	0x83, 0xf1, 0x2d, 0xbd, 0x9c, 0xae, 0x1b, 0xf4, 0xf5, 0xf2, 0x57, 0x00, 0x00, 0x00, 0xff, 0xff,
+	0x12, 0xf2, 0x52, 0xe1, 0xe5, 0x04, 0x00, 0x00,
 }

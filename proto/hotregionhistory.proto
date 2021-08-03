@@ -26,14 +26,14 @@ message SearchHotRegionsRequest{
 	repeated uint64 region_id = 3;
 	repeated uint64 store_id = 4;
 	HotRegionType hot_region_type = 5;
-	float low_hot_degree = 6;
-	float high_hot_degree = 7;
-	float low_flow_bytes = 8;
-	float high_flow_bytes = 9;
-	float low_key_rate = 10;
-	float high_key_rate = 11;
-	float low_query_rate = 12;
-	float high_query_rate = 13;
+	int64 low_hot_degree = 6;
+	int64 high_hot_degree = 7;
+	double	low_flow_bytes = 8;
+	double high_flow_bytes = 9;
+	double low_key_rate = 10;
+	double high_key_rate = 11;
+	double low_query_rate = 12;
+	double high_query_rate = 13;
 }
 
 message SearchHotRegionsResponse{
@@ -45,10 +45,10 @@ message HotRegionsMessages{
 	uint64 region_id = 2;
 	uint64 store_id = 3;
 	HotRegionType hot_region_type = 4;
-	float hot_degree = 5;
-	float flow_bytes = 6;
-	float key_rate = 7;
-	float query_rate = 8;
+	int64 hot_degree = 5;
+	double flow_bytes = 6;
+	double key_rate = 7;
+	double query_rate = 8;
 	bytes start_key = 9; 
 	bytes end_key = 10;
 }
