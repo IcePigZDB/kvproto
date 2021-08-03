@@ -1,5 +1,5 @@
 syntax = "proto3";
-package diagnosticspb;
+package hotregionhistory;
 
 import "gogoproto/gogo.proto";
 
