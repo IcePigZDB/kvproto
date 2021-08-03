@@ -15,8 +15,6 @@ import (
 	context "golang.org/x/net/context"
 
 	grpc "google.golang.org/grpc"
-
-	encoding_binary "encoding/binary"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -65,7 +63,7 @@ func (x LogLevel) String() string {
 	return proto.EnumName(LogLevel_name, int32(x))
 }
 func (LogLevel) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_diagnosticspb_49047448da91afd0, []int{0}
+	return fileDescriptor_diagnosticspb_90b05d2ad5771e76, []int{0}
 }
 
 type ServerInfoType int32
@@ -94,30 +92,7 @@ func (x ServerInfoType) String() string {
 	return proto.EnumName(ServerInfoType_name, int32(x))
 }
 func (ServerInfoType) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_diagnosticspb_49047448da91afd0, []int{1}
-}
-
-type HotRegionType int32
-
-const (
-	HotRegionType_Read  HotRegionType = 0
-	HotRegionType_Write HotRegionType = 1
-)
-
-var HotRegionType_name = map[int32]string{
-	0: "Read",
-	1: "Write",
-}
-var HotRegionType_value = map[string]int32{
-	"Read":  0,
-	"Write": 1,
-}
-
-func (x HotRegionType) String() string {
-	return proto.EnumName(HotRegionType_name, int32(x))
-}
-func (HotRegionType) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_diagnosticspb_49047448da91afd0, []int{2}
+	return fileDescriptor_diagnosticspb_90b05d2ad5771e76, []int{1}
 }
 
 type SearchLogRequest_Target int32
@@ -140,7 +115,7 @@ func (x SearchLogRequest_Target) String() string {
 	return proto.EnumName(SearchLogRequest_Target_name, int32(x))
 }
 func (SearchLogRequest_Target) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_diagnosticspb_49047448da91afd0, []int{0, 0}
+	return fileDescriptor_diagnosticspb_90b05d2ad5771e76, []int{0, 0}
 }
 
 type SearchLogRequest struct {
@@ -161,7 +136,7 @@ func (m *SearchLogRequest) Reset()         { *m = SearchLogRequest{} }
 func (m *SearchLogRequest) String() string { return proto.CompactTextString(m) }
 func (*SearchLogRequest) ProtoMessage()    {}
 func (*SearchLogRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_diagnosticspb_49047448da91afd0, []int{0}
+	return fileDescriptor_diagnosticspb_90b05d2ad5771e76, []int{0}
 }
 func (m *SearchLogRequest) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -236,7 +211,7 @@ func (m *SearchLogResponse) Reset()         { *m = SearchLogResponse{} }
 func (m *SearchLogResponse) String() string { return proto.CompactTextString(m) }
 func (*SearchLogResponse) ProtoMessage()    {}
 func (*SearchLogResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_diagnosticspb_49047448da91afd0, []int{1}
+	return fileDescriptor_diagnosticspb_90b05d2ad5771e76, []int{1}
 }
 func (m *SearchLogResponse) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -285,7 +260,7 @@ func (m *LogMessage) Reset()         { *m = LogMessage{} }
 func (m *LogMessage) String() string { return proto.CompactTextString(m) }
 func (*LogMessage) ProtoMessage()    {}
 func (*LogMessage) Descriptor() ([]byte, []int) {
-	return fileDescriptor_diagnosticspb_49047448da91afd0, []int{2}
+	return fileDescriptor_diagnosticspb_90b05d2ad5771e76, []int{2}
 }
 func (m *LogMessage) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -346,7 +321,7 @@ func (m *ServerInfoRequest) Reset()         { *m = ServerInfoRequest{} }
 func (m *ServerInfoRequest) String() string { return proto.CompactTextString(m) }
 func (*ServerInfoRequest) ProtoMessage()    {}
 func (*ServerInfoRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_diagnosticspb_49047448da91afd0, []int{3}
+	return fileDescriptor_diagnosticspb_90b05d2ad5771e76, []int{3}
 }
 func (m *ServerInfoRequest) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -394,7 +369,7 @@ func (m *ServerInfoPair) Reset()         { *m = ServerInfoPair{} }
 func (m *ServerInfoPair) String() string { return proto.CompactTextString(m) }
 func (*ServerInfoPair) ProtoMessage()    {}
 func (*ServerInfoPair) Descriptor() ([]byte, []int) {
-	return fileDescriptor_diagnosticspb_49047448da91afd0, []int{4}
+	return fileDescriptor_diagnosticspb_90b05d2ad5771e76, []int{4}
 }
 func (m *ServerInfoPair) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -461,7 +436,7 @@ func (m *ServerInfoItem) Reset()         { *m = ServerInfoItem{} }
 func (m *ServerInfoItem) String() string { return proto.CompactTextString(m) }
 func (*ServerInfoItem) ProtoMessage()    {}
 func (*ServerInfoItem) Descriptor() ([]byte, []int) {
-	return fileDescriptor_diagnosticspb_49047448da91afd0, []int{5}
+	return fileDescriptor_diagnosticspb_90b05d2ad5771e76, []int{5}
 }
 func (m *ServerInfoItem) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -522,7 +497,7 @@ func (m *ServerInfoResponse) Reset()         { *m = ServerInfoResponse{} }
 func (m *ServerInfoResponse) String() string { return proto.CompactTextString(m) }
 func (*ServerInfoResponse) ProtoMessage()    {}
 func (*ServerInfoResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_diagnosticspb_49047448da91afd0, []int{6}
+	return fileDescriptor_diagnosticspb_90b05d2ad5771e76, []int{6}
 }
 func (m *ServerInfoResponse) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -558,315 +533,6 @@ func (m *ServerInfoResponse) GetItems() []*ServerInfoItem {
 	return nil
 }
 
-type SearchHotRegionsRequest struct {
-	StartTime            int64         `protobuf:"varint,1,opt,name=start_time,json=startTime,proto3" json:"start_time,omitempty"`
-	EndTime              int64         `protobuf:"varint,2,opt,name=end_time,json=endTime,proto3" json:"end_time,omitempty"`
-	RegionId             []uint64      `protobuf:"varint,3,rep,packed,name=region_id,json=regionId" json:"region_id,omitempty"`
-	StoreId              []uint64      `protobuf:"varint,4,rep,packed,name=store_id,json=storeId" json:"store_id,omitempty"`
-	HotRegionType        HotRegionType `protobuf:"varint,5,opt,name=hot_region_type,json=hotRegionType,proto3,enum=diagnosticspb.HotRegionType" json:"hot_region_type,omitempty"`
-	LowHotDegree         float32       `protobuf:"fixed32,6,opt,name=low_hot_degree,json=lowHotDegree,proto3" json:"low_hot_degree,omitempty"`
-	HighHotDegree        float32       `protobuf:"fixed32,7,opt,name=high_hot_degree,json=highHotDegree,proto3" json:"high_hot_degree,omitempty"`
-	LowFlowBytes         float32       `protobuf:"fixed32,8,opt,name=low_flow_bytes,json=lowFlowBytes,proto3" json:"low_flow_bytes,omitempty"`
-	HighFlowBytes        float32       `protobuf:"fixed32,9,opt,name=high_flow_bytes,json=highFlowBytes,proto3" json:"high_flow_bytes,omitempty"`
-	LowKeyRate           float32       `protobuf:"fixed32,10,opt,name=low_key_rate,json=lowKeyRate,proto3" json:"low_key_rate,omitempty"`
-	HighKeyRate          float32       `protobuf:"fixed32,11,opt,name=high_key_rate,json=highKeyRate,proto3" json:"high_key_rate,omitempty"`
-	LowQueryRate         float32       `protobuf:"fixed32,12,opt,name=low_query_rate,json=lowQueryRate,proto3" json:"low_query_rate,omitempty"`
-	HighQueryRate        float32       `protobuf:"fixed32,13,opt,name=high_query_rate,json=highQueryRate,proto3" json:"high_query_rate,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
-	XXX_unrecognized     []byte        `json:"-"`
-	XXX_sizecache        int32         `json:"-"`
-}
-
-func (m *SearchHotRegionsRequest) Reset()         { *m = SearchHotRegionsRequest{} }
-func (m *SearchHotRegionsRequest) String() string { return proto.CompactTextString(m) }
-func (*SearchHotRegionsRequest) ProtoMessage()    {}
-func (*SearchHotRegionsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_diagnosticspb_49047448da91afd0, []int{7}
-}
-func (m *SearchHotRegionsRequest) XXX_Unmarshal(b []byte) error {
-	return m.Unmarshal(b)
-}
-func (m *SearchHotRegionsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	if deterministic {
-		return xxx_messageInfo_SearchHotRegionsRequest.Marshal(b, m, deterministic)
-	} else {
-		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
-		if err != nil {
-			return nil, err
-		}
-		return b[:n], nil
-	}
-}
-func (dst *SearchHotRegionsRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SearchHotRegionsRequest.Merge(dst, src)
-}
-func (m *SearchHotRegionsRequest) XXX_Size() int {
-	return m.Size()
-}
-func (m *SearchHotRegionsRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_SearchHotRegionsRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_SearchHotRegionsRequest proto.InternalMessageInfo
-
-func (m *SearchHotRegionsRequest) GetStartTime() int64 {
-	if m != nil {
-		return m.StartTime
-	}
-	return 0
-}
-
-func (m *SearchHotRegionsRequest) GetEndTime() int64 {
-	if m != nil {
-		return m.EndTime
-	}
-	return 0
-}
-
-func (m *SearchHotRegionsRequest) GetRegionId() []uint64 {
-	if m != nil {
-		return m.RegionId
-	}
-	return nil
-}
-
-func (m *SearchHotRegionsRequest) GetStoreId() []uint64 {
-	if m != nil {
-		return m.StoreId
-	}
-	return nil
-}
-
-func (m *SearchHotRegionsRequest) GetHotRegionType() HotRegionType {
-	if m != nil {
-		return m.HotRegionType
-	}
-	return HotRegionType_Read
-}
-
-func (m *SearchHotRegionsRequest) GetLowHotDegree() float32 {
-	if m != nil {
-		return m.LowHotDegree
-	}
-	return 0
-}
-
-func (m *SearchHotRegionsRequest) GetHighHotDegree() float32 {
-	if m != nil {
-		return m.HighHotDegree
-	}
-	return 0
-}
-
-func (m *SearchHotRegionsRequest) GetLowFlowBytes() float32 {
-	if m != nil {
-		return m.LowFlowBytes
-	}
-	return 0
-}
-
-func (m *SearchHotRegionsRequest) GetHighFlowBytes() float32 {
-	if m != nil {
-		return m.HighFlowBytes
-	}
-	return 0
-}
-
-func (m *SearchHotRegionsRequest) GetLowKeyRate() float32 {
-	if m != nil {
-		return m.LowKeyRate
-	}
-	return 0
-}
-
-func (m *SearchHotRegionsRequest) GetHighKeyRate() float32 {
-	if m != nil {
-		return m.HighKeyRate
-	}
-	return 0
-}
-
-func (m *SearchHotRegionsRequest) GetLowQueryRate() float32 {
-	if m != nil {
-		return m.LowQueryRate
-	}
-	return 0
-}
-
-func (m *SearchHotRegionsRequest) GetHighQueryRate() float32 {
-	if m != nil {
-		return m.HighQueryRate
-	}
-	return 0
-}
-
-type SearchHotRegionsResponse struct {
-	Messages             []*HotRegionsMessages `protobuf:"bytes,1,rep,name=messages" json:"messages,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}              `json:"-"`
-	XXX_unrecognized     []byte                `json:"-"`
-	XXX_sizecache        int32                 `json:"-"`
-}
-
-func (m *SearchHotRegionsResponse) Reset()         { *m = SearchHotRegionsResponse{} }
-func (m *SearchHotRegionsResponse) String() string { return proto.CompactTextString(m) }
-func (*SearchHotRegionsResponse) ProtoMessage()    {}
-func (*SearchHotRegionsResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_diagnosticspb_49047448da91afd0, []int{8}
-}
-func (m *SearchHotRegionsResponse) XXX_Unmarshal(b []byte) error {
-	return m.Unmarshal(b)
-}
-func (m *SearchHotRegionsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	if deterministic {
-		return xxx_messageInfo_SearchHotRegionsResponse.Marshal(b, m, deterministic)
-	} else {
-		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
-		if err != nil {
-			return nil, err
-		}
-		return b[:n], nil
-	}
-}
-func (dst *SearchHotRegionsResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SearchHotRegionsResponse.Merge(dst, src)
-}
-func (m *SearchHotRegionsResponse) XXX_Size() int {
-	return m.Size()
-}
-func (m *SearchHotRegionsResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_SearchHotRegionsResponse.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_SearchHotRegionsResponse proto.InternalMessageInfo
-
-func (m *SearchHotRegionsResponse) GetMessages() []*HotRegionsMessages {
-	if m != nil {
-		return m.Messages
-	}
-	return nil
-}
-
-type HotRegionsMessages struct {
-	UpdateTime           int64         `protobuf:"varint,1,opt,name=update_time,json=updateTime,proto3" json:"update_time,omitempty"`
-	RegionId             uint64        `protobuf:"varint,2,opt,name=region_id,json=regionId,proto3" json:"region_id,omitempty"`
-	StoreId              uint64        `protobuf:"varint,3,opt,name=store_id,json=storeId,proto3" json:"store_id,omitempty"`
-	HotRegionType        HotRegionType `protobuf:"varint,4,opt,name=hot_region_type,json=hotRegionType,proto3,enum=diagnosticspb.HotRegionType" json:"hot_region_type,omitempty"`
-	HotDegree            float32       `protobuf:"fixed32,5,opt,name=hot_degree,json=hotDegree,proto3" json:"hot_degree,omitempty"`
-	FlowBytes            float32       `protobuf:"fixed32,6,opt,name=flow_bytes,json=flowBytes,proto3" json:"flow_bytes,omitempty"`
-	KeyRate              float32       `protobuf:"fixed32,7,opt,name=key_rate,json=keyRate,proto3" json:"key_rate,omitempty"`
-	QueryRate            float32       `protobuf:"fixed32,8,opt,name=query_rate,json=queryRate,proto3" json:"query_rate,omitempty"`
-	StartKey             []byte        `protobuf:"bytes,9,opt,name=start_key,json=startKey,proto3" json:"start_key,omitempty"`
-	EndKey               []byte        `protobuf:"bytes,10,opt,name=end_key,json=endKey,proto3" json:"end_key,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
-	XXX_unrecognized     []byte        `json:"-"`
-	XXX_sizecache        int32         `json:"-"`
-}
-
-func (m *HotRegionsMessages) Reset()         { *m = HotRegionsMessages{} }
-func (m *HotRegionsMessages) String() string { return proto.CompactTextString(m) }
-func (*HotRegionsMessages) ProtoMessage()    {}
-func (*HotRegionsMessages) Descriptor() ([]byte, []int) {
-	return fileDescriptor_diagnosticspb_49047448da91afd0, []int{9}
-}
-func (m *HotRegionsMessages) XXX_Unmarshal(b []byte) error {
-	return m.Unmarshal(b)
-}
-func (m *HotRegionsMessages) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	if deterministic {
-		return xxx_messageInfo_HotRegionsMessages.Marshal(b, m, deterministic)
-	} else {
-		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
-		if err != nil {
-			return nil, err
-		}
-		return b[:n], nil
-	}
-}
-func (dst *HotRegionsMessages) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_HotRegionsMessages.Merge(dst, src)
-}
-func (m *HotRegionsMessages) XXX_Size() int {
-	return m.Size()
-}
-func (m *HotRegionsMessages) XXX_DiscardUnknown() {
-	xxx_messageInfo_HotRegionsMessages.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_HotRegionsMessages proto.InternalMessageInfo
-
-func (m *HotRegionsMessages) GetUpdateTime() int64 {
-	if m != nil {
-		return m.UpdateTime
-	}
-	return 0
-}
-
-func (m *HotRegionsMessages) GetRegionId() uint64 {
-	if m != nil {
-		return m.RegionId
-	}
-	return 0
-}
-
-func (m *HotRegionsMessages) GetStoreId() uint64 {
-	if m != nil {
-		return m.StoreId
-	}
-	return 0
-}
-
-func (m *HotRegionsMessages) GetHotRegionType() HotRegionType {
-	if m != nil {
-		return m.HotRegionType
-	}
-	return HotRegionType_Read
-}
-
-func (m *HotRegionsMessages) GetHotDegree() float32 {
-	if m != nil {
-		return m.HotDegree
-	}
-	return 0
-}
-
-func (m *HotRegionsMessages) GetFlowBytes() float32 {
-	if m != nil {
-		return m.FlowBytes
-	}
-	return 0
-}
-
-func (m *HotRegionsMessages) GetKeyRate() float32 {
-	if m != nil {
-		return m.KeyRate
-	}
-	return 0
-}
-
-func (m *HotRegionsMessages) GetQueryRate() float32 {
-	if m != nil {
-		return m.QueryRate
-	}
-	return 0
-}
-
-func (m *HotRegionsMessages) GetStartKey() []byte {
-	if m != nil {
-		return m.StartKey
-	}
-	return nil
-}
-
-func (m *HotRegionsMessages) GetEndKey() []byte {
-	if m != nil {
-		return m.EndKey
-	}
-	return nil
-}
-
 func init() {
 	proto.RegisterType((*SearchLogRequest)(nil), "diagnosticspb.SearchLogRequest")
 	proto.RegisterType((*SearchLogResponse)(nil), "diagnosticspb.SearchLogResponse")
@@ -875,12 +541,8 @@ func init() {
 	proto.RegisterType((*ServerInfoPair)(nil), "diagnosticspb.ServerInfoPair")
 	proto.RegisterType((*ServerInfoItem)(nil), "diagnosticspb.ServerInfoItem")
 	proto.RegisterType((*ServerInfoResponse)(nil), "diagnosticspb.ServerInfoResponse")
-	proto.RegisterType((*SearchHotRegionsRequest)(nil), "diagnosticspb.SearchHotRegionsRequest")
-	proto.RegisterType((*SearchHotRegionsResponse)(nil), "diagnosticspb.SearchHotRegionsResponse")
-	proto.RegisterType((*HotRegionsMessages)(nil), "diagnosticspb.HotRegionsMessages")
 	proto.RegisterEnum("diagnosticspb.LogLevel", LogLevel_name, LogLevel_value)
 	proto.RegisterEnum("diagnosticspb.ServerInfoType", ServerInfoType_name, ServerInfoType_value)
-	proto.RegisterEnum("diagnosticspb.HotRegionType", HotRegionType_name, HotRegionType_value)
 	proto.RegisterEnum("diagnosticspb.SearchLogRequest_Target", SearchLogRequest_Target_name, SearchLogRequest_Target_value)
 }
 
@@ -899,8 +561,6 @@ type DiagnosticsClient interface {
 	SearchLog(ctx context.Context, in *SearchLogRequest, opts ...grpc.CallOption) (Diagnostics_SearchLogClient, error)
 	// Retrieves server info in the target node
 	ServerInfo(ctx context.Context, in *ServerInfoRequest, opts ...grpc.CallOption) (*ServerInfoResponse, error)
-	// Search tikv hot regions in pd node
-	SearchHotRegions(ctx context.Context, in *SearchHotRegionsRequest, opts ...grpc.CallOption) (Diagnostics_SearchHotRegionsClient, error)
 }
 
 type diagnosticsClient struct {
@@ -952,38 +612,6 @@ func (c *diagnosticsClient) ServerInfo(ctx context.Context, in *ServerInfoReques
 	return out, nil
 }
 
-func (c *diagnosticsClient) SearchHotRegions(ctx context.Context, in *SearchHotRegionsRequest, opts ...grpc.CallOption) (Diagnostics_SearchHotRegionsClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_Diagnostics_serviceDesc.Streams[1], "/diagnosticspb.Diagnostics/search_hot_regions", opts...)
-	if err != nil {
-		return nil, err
-	}
-	x := &diagnosticsSearchHotRegionsClient{stream}
-	if err := x.ClientStream.SendMsg(in); err != nil {
-		return nil, err
-	}
-	if err := x.ClientStream.CloseSend(); err != nil {
-		return nil, err
-	}
-	return x, nil
-}
-
-type Diagnostics_SearchHotRegionsClient interface {
-	Recv() (*SearchHotRegionsResponse, error)
-	grpc.ClientStream
-}
-
-type diagnosticsSearchHotRegionsClient struct {
-	grpc.ClientStream
-}
-
-func (x *diagnosticsSearchHotRegionsClient) Recv() (*SearchHotRegionsResponse, error) {
-	m := new(SearchHotRegionsResponse)
-	if err := x.ClientStream.RecvMsg(m); err != nil {
-		return nil, err
-	}
-	return m, nil
-}
-
 // Server API for Diagnostics service
 
 type DiagnosticsServer interface {
@@ -991,8 +619,6 @@ type DiagnosticsServer interface {
 	SearchLog(*SearchLogRequest, Diagnostics_SearchLogServer) error
 	// Retrieves server info in the target node
 	ServerInfo(context.Context, *ServerInfoRequest) (*ServerInfoResponse, error)
-	// Search tikv hot regions in pd node
-	SearchHotRegions(*SearchHotRegionsRequest, Diagnostics_SearchHotRegionsServer) error
 }
 
 func RegisterDiagnosticsServer(s *grpc.Server, srv DiagnosticsServer) {
@@ -1038,27 +664,6 @@ func _Diagnostics_ServerInfo_Handler(srv interface{}, ctx context.Context, dec f
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Diagnostics_SearchHotRegions_Handler(srv interface{}, stream grpc.ServerStream) error {
-	m := new(SearchHotRegionsRequest)
-	if err := stream.RecvMsg(m); err != nil {
-		return err
-	}
-	return srv.(DiagnosticsServer).SearchHotRegions(m, &diagnosticsSearchHotRegionsServer{stream})
-}
-
-type Diagnostics_SearchHotRegionsServer interface {
-	Send(*SearchHotRegionsResponse) error
-	grpc.ServerStream
-}
-
-type diagnosticsSearchHotRegionsServer struct {
-	grpc.ServerStream
-}
-
-func (x *diagnosticsSearchHotRegionsServer) Send(m *SearchHotRegionsResponse) error {
-	return x.ServerStream.SendMsg(m)
-}
-
 var _Diagnostics_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "diagnosticspb.Diagnostics",
 	HandlerType: (*DiagnosticsServer)(nil),
@@ -1072,11 +677,6 @@ var _Diagnostics_serviceDesc = grpc.ServiceDesc{
 		{
 			StreamName:    "search_log",
 			Handler:       _Diagnostics_SearchLog_Handler,
-			ServerStreams: true,
-		},
-		{
-			StreamName:    "search_hot_regions",
-			Handler:       _Diagnostics_SearchHotRegions_Handler,
 			ServerStreams: true,
 		},
 	},
@@ -1358,234 +958,6 @@ func (m *ServerInfoResponse) MarshalTo(dAtA []byte) (int, error) {
 	return i, nil
 }
 
-func (m *SearchHotRegionsRequest) Marshal() (dAtA []byte, err error) {
-	size := m.Size()
-	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
-	if err != nil {
-		return nil, err
-	}
-	return dAtA[:n], nil
-}
-
-func (m *SearchHotRegionsRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
-	_ = i
-	var l int
-	_ = l
-	if m.StartTime != 0 {
-		dAtA[i] = 0x8
-		i++
-		i = encodeVarintDiagnosticspb(dAtA, i, uint64(m.StartTime))
-	}
-	if m.EndTime != 0 {
-		dAtA[i] = 0x10
-		i++
-		i = encodeVarintDiagnosticspb(dAtA, i, uint64(m.EndTime))
-	}
-	if len(m.RegionId) > 0 {
-		dAtA4 := make([]byte, len(m.RegionId)*10)
-		var j3 int
-		for _, num := range m.RegionId {
-			for num >= 1<<7 {
-				dAtA4[j3] = uint8(uint64(num)&0x7f | 0x80)
-				num >>= 7
-				j3++
-			}
-			dAtA4[j3] = uint8(num)
-			j3++
-		}
-		dAtA[i] = 0x1a
-		i++
-		i = encodeVarintDiagnosticspb(dAtA, i, uint64(j3))
-		i += copy(dAtA[i:], dAtA4[:j3])
-	}
-	if len(m.StoreId) > 0 {
-		dAtA6 := make([]byte, len(m.StoreId)*10)
-		var j5 int
-		for _, num := range m.StoreId {
-			for num >= 1<<7 {
-				dAtA6[j5] = uint8(uint64(num)&0x7f | 0x80)
-				num >>= 7
-				j5++
-			}
-			dAtA6[j5] = uint8(num)
-			j5++
-		}
-		dAtA[i] = 0x22
-		i++
-		i = encodeVarintDiagnosticspb(dAtA, i, uint64(j5))
-		i += copy(dAtA[i:], dAtA6[:j5])
-	}
-	if m.HotRegionType != 0 {
-		dAtA[i] = 0x28
-		i++
-		i = encodeVarintDiagnosticspb(dAtA, i, uint64(m.HotRegionType))
-	}
-	if m.LowHotDegree != 0 {
-		dAtA[i] = 0x35
-		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.LowHotDegree))))
-		i += 4
-	}
-	if m.HighHotDegree != 0 {
-		dAtA[i] = 0x3d
-		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.HighHotDegree))))
-		i += 4
-	}
-	if m.LowFlowBytes != 0 {
-		dAtA[i] = 0x45
-		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.LowFlowBytes))))
-		i += 4
-	}
-	if m.HighFlowBytes != 0 {
-		dAtA[i] = 0x4d
-		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.HighFlowBytes))))
-		i += 4
-	}
-	if m.LowKeyRate != 0 {
-		dAtA[i] = 0x55
-		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.LowKeyRate))))
-		i += 4
-	}
-	if m.HighKeyRate != 0 {
-		dAtA[i] = 0x5d
-		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.HighKeyRate))))
-		i += 4
-	}
-	if m.LowQueryRate != 0 {
-		dAtA[i] = 0x65
-		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.LowQueryRate))))
-		i += 4
-	}
-	if m.HighQueryRate != 0 {
-		dAtA[i] = 0x6d
-		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.HighQueryRate))))
-		i += 4
-	}
-	if m.XXX_unrecognized != nil {
-		i += copy(dAtA[i:], m.XXX_unrecognized)
-	}
-	return i, nil
-}
-
-func (m *SearchHotRegionsResponse) Marshal() (dAtA []byte, err error) {
-	size := m.Size()
-	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
-	if err != nil {
-		return nil, err
-	}
-	return dAtA[:n], nil
-}
-
-func (m *SearchHotRegionsResponse) MarshalTo(dAtA []byte) (int, error) {
-	var i int
-	_ = i
-	var l int
-	_ = l
-	if len(m.Messages) > 0 {
-		for _, msg := range m.Messages {
-			dAtA[i] = 0xa
-			i++
-			i = encodeVarintDiagnosticspb(dAtA, i, uint64(msg.Size()))
-			n, err := msg.MarshalTo(dAtA[i:])
-			if err != nil {
-				return 0, err
-			}
-			i += n
-		}
-	}
-	if m.XXX_unrecognized != nil {
-		i += copy(dAtA[i:], m.XXX_unrecognized)
-	}
-	return i, nil
-}
-
-func (m *HotRegionsMessages) Marshal() (dAtA []byte, err error) {
-	size := m.Size()
-	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
-	if err != nil {
-		return nil, err
-	}
-	return dAtA[:n], nil
-}
-
-func (m *HotRegionsMessages) MarshalTo(dAtA []byte) (int, error) {
-	var i int
-	_ = i
-	var l int
-	_ = l
-	if m.UpdateTime != 0 {
-		dAtA[i] = 0x8
-		i++
-		i = encodeVarintDiagnosticspb(dAtA, i, uint64(m.UpdateTime))
-	}
-	if m.RegionId != 0 {
-		dAtA[i] = 0x10
-		i++
-		i = encodeVarintDiagnosticspb(dAtA, i, uint64(m.RegionId))
-	}
-	if m.StoreId != 0 {
-		dAtA[i] = 0x18
-		i++
-		i = encodeVarintDiagnosticspb(dAtA, i, uint64(m.StoreId))
-	}
-	if m.HotRegionType != 0 {
-		dAtA[i] = 0x20
-		i++
-		i = encodeVarintDiagnosticspb(dAtA, i, uint64(m.HotRegionType))
-	}
-	if m.HotDegree != 0 {
-		dAtA[i] = 0x2d
-		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.HotDegree))))
-		i += 4
-	}
-	if m.FlowBytes != 0 {
-		dAtA[i] = 0x35
-		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.FlowBytes))))
-		i += 4
-	}
-	if m.KeyRate != 0 {
-		dAtA[i] = 0x3d
-		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.KeyRate))))
-		i += 4
-	}
-	if m.QueryRate != 0 {
-		dAtA[i] = 0x45
-		i++
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.QueryRate))))
-		i += 4
-	}
-	if len(m.StartKey) > 0 {
-		dAtA[i] = 0x4a
-		i++
-		i = encodeVarintDiagnosticspb(dAtA, i, uint64(len(m.StartKey)))
-		i += copy(dAtA[i:], m.StartKey)
-	}
-	if len(m.EndKey) > 0 {
-		dAtA[i] = 0x52
-		i++
-		i = encodeVarintDiagnosticspb(dAtA, i, uint64(len(m.EndKey)))
-		i += copy(dAtA[i:], m.EndKey)
-	}
-	if m.XXX_unrecognized != nil {
-		i += copy(dAtA[i:], m.XXX_unrecognized)
-	}
-	return i, nil
-}
-
 func encodeVarintDiagnosticspb(dAtA []byte, offset int, v uint64) int {
 	for v >= 1<<7 {
 		dAtA[offset] = uint8(v&0x7f | 0x80)
@@ -1720,118 +1092,6 @@ func (m *ServerInfoResponse) Size() (n int) {
 			l = e.Size()
 			n += 1 + l + sovDiagnosticspb(uint64(l))
 		}
-	}
-	if m.XXX_unrecognized != nil {
-		n += len(m.XXX_unrecognized)
-	}
-	return n
-}
-
-func (m *SearchHotRegionsRequest) Size() (n int) {
-	var l int
-	_ = l
-	if m.StartTime != 0 {
-		n += 1 + sovDiagnosticspb(uint64(m.StartTime))
-	}
-	if m.EndTime != 0 {
-		n += 1 + sovDiagnosticspb(uint64(m.EndTime))
-	}
-	if len(m.RegionId) > 0 {
-		l = 0
-		for _, e := range m.RegionId {
-			l += sovDiagnosticspb(uint64(e))
-		}
-		n += 1 + sovDiagnosticspb(uint64(l)) + l
-	}
-	if len(m.StoreId) > 0 {
-		l = 0
-		for _, e := range m.StoreId {
-			l += sovDiagnosticspb(uint64(e))
-		}
-		n += 1 + sovDiagnosticspb(uint64(l)) + l
-	}
-	if m.HotRegionType != 0 {
-		n += 1 + sovDiagnosticspb(uint64(m.HotRegionType))
-	}
-	if m.LowHotDegree != 0 {
-		n += 5
-	}
-	if m.HighHotDegree != 0 {
-		n += 5
-	}
-	if m.LowFlowBytes != 0 {
-		n += 5
-	}
-	if m.HighFlowBytes != 0 {
-		n += 5
-	}
-	if m.LowKeyRate != 0 {
-		n += 5
-	}
-	if m.HighKeyRate != 0 {
-		n += 5
-	}
-	if m.LowQueryRate != 0 {
-		n += 5
-	}
-	if m.HighQueryRate != 0 {
-		n += 5
-	}
-	if m.XXX_unrecognized != nil {
-		n += len(m.XXX_unrecognized)
-	}
-	return n
-}
-
-func (m *SearchHotRegionsResponse) Size() (n int) {
-	var l int
-	_ = l
-	if len(m.Messages) > 0 {
-		for _, e := range m.Messages {
-			l = e.Size()
-			n += 1 + l + sovDiagnosticspb(uint64(l))
-		}
-	}
-	if m.XXX_unrecognized != nil {
-		n += len(m.XXX_unrecognized)
-	}
-	return n
-}
-
-func (m *HotRegionsMessages) Size() (n int) {
-	var l int
-	_ = l
-	if m.UpdateTime != 0 {
-		n += 1 + sovDiagnosticspb(uint64(m.UpdateTime))
-	}
-	if m.RegionId != 0 {
-		n += 1 + sovDiagnosticspb(uint64(m.RegionId))
-	}
-	if m.StoreId != 0 {
-		n += 1 + sovDiagnosticspb(uint64(m.StoreId))
-	}
-	if m.HotRegionType != 0 {
-		n += 1 + sovDiagnosticspb(uint64(m.HotRegionType))
-	}
-	if m.HotDegree != 0 {
-		n += 5
-	}
-	if m.FlowBytes != 0 {
-		n += 5
-	}
-	if m.KeyRate != 0 {
-		n += 5
-	}
-	if m.QueryRate != 0 {
-		n += 5
-	}
-	l = len(m.StartKey)
-	if l > 0 {
-		n += 1 + l + sovDiagnosticspb(uint64(l))
-	}
-	l = len(m.EndKey)
-	if l > 0 {
-		n += 1 + l + sovDiagnosticspb(uint64(l))
 	}
 	if m.XXX_unrecognized != nil {
 		n += len(m.XXX_unrecognized)
@@ -2652,641 +1912,6 @@ func (m *ServerInfoResponse) Unmarshal(dAtA []byte) error {
 	}
 	return nil
 }
-func (m *SearchHotRegionsRequest) Unmarshal(dAtA []byte) error {
-	l := len(dAtA)
-	iNdEx := 0
-	for iNdEx < l {
-		preIndex := iNdEx
-		var wire uint64
-		for shift := uint(0); ; shift += 7 {
-			if shift >= 64 {
-				return ErrIntOverflowDiagnosticspb
-			}
-			if iNdEx >= l {
-				return io.ErrUnexpectedEOF
-			}
-			b := dAtA[iNdEx]
-			iNdEx++
-			wire |= (uint64(b) & 0x7F) << shift
-			if b < 0x80 {
-				break
-			}
-		}
-		fieldNum := int32(wire >> 3)
-		wireType := int(wire & 0x7)
-		if wireType == 4 {
-			return fmt.Errorf("proto: SearchHotRegionsRequest: wiretype end group for non-group")
-		}
-		if fieldNum <= 0 {
-			return fmt.Errorf("proto: SearchHotRegionsRequest: illegal tag %d (wire type %d)", fieldNum, wire)
-		}
-		switch fieldNum {
-		case 1:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field StartTime", wireType)
-			}
-			m.StartTime = 0
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowDiagnosticspb
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				m.StartTime |= (int64(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-		case 2:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field EndTime", wireType)
-			}
-			m.EndTime = 0
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowDiagnosticspb
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				m.EndTime |= (int64(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-		case 3:
-			if wireType == 0 {
-				var v uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowDiagnosticspb
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					v |= (uint64(b) & 0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				m.RegionId = append(m.RegionId, v)
-			} else if wireType == 2 {
-				var packedLen int
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowDiagnosticspb
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					packedLen |= (int(b) & 0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				if packedLen < 0 {
-					return ErrInvalidLengthDiagnosticspb
-				}
-				postIndex := iNdEx + packedLen
-				if postIndex > l {
-					return io.ErrUnexpectedEOF
-				}
-				for iNdEx < postIndex {
-					var v uint64
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowDiagnosticspb
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						v |= (uint64(b) & 0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					m.RegionId = append(m.RegionId, v)
-				}
-			} else {
-				return fmt.Errorf("proto: wrong wireType = %d for field RegionId", wireType)
-			}
-		case 4:
-			if wireType == 0 {
-				var v uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowDiagnosticspb
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					v |= (uint64(b) & 0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				m.StoreId = append(m.StoreId, v)
-			} else if wireType == 2 {
-				var packedLen int
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowDiagnosticspb
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					packedLen |= (int(b) & 0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				if packedLen < 0 {
-					return ErrInvalidLengthDiagnosticspb
-				}
-				postIndex := iNdEx + packedLen
-				if postIndex > l {
-					return io.ErrUnexpectedEOF
-				}
-				for iNdEx < postIndex {
-					var v uint64
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowDiagnosticspb
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						v |= (uint64(b) & 0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					m.StoreId = append(m.StoreId, v)
-				}
-			} else {
-				return fmt.Errorf("proto: wrong wireType = %d for field StoreId", wireType)
-			}
-		case 5:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field HotRegionType", wireType)
-			}
-			m.HotRegionType = 0
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowDiagnosticspb
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				m.HotRegionType |= (HotRegionType(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-		case 6:
-			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field LowHotDegree", wireType)
-			}
-			var v uint32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
-			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.LowHotDegree = float32(math.Float32frombits(v))
-		case 7:
-			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field HighHotDegree", wireType)
-			}
-			var v uint32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
-			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.HighHotDegree = float32(math.Float32frombits(v))
-		case 8:
-			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field LowFlowBytes", wireType)
-			}
-			var v uint32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
-			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.LowFlowBytes = float32(math.Float32frombits(v))
-		case 9:
-			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field HighFlowBytes", wireType)
-			}
-			var v uint32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
-			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.HighFlowBytes = float32(math.Float32frombits(v))
-		case 10:
-			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field LowKeyRate", wireType)
-			}
-			var v uint32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
-			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.LowKeyRate = float32(math.Float32frombits(v))
-		case 11:
-			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field HighKeyRate", wireType)
-			}
-			var v uint32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
-			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.HighKeyRate = float32(math.Float32frombits(v))
-		case 12:
-			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field LowQueryRate", wireType)
-			}
-			var v uint32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
-			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.LowQueryRate = float32(math.Float32frombits(v))
-		case 13:
-			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field HighQueryRate", wireType)
-			}
-			var v uint32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
-			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.HighQueryRate = float32(math.Float32frombits(v))
-		default:
-			iNdEx = preIndex
-			skippy, err := skipDiagnosticspb(dAtA[iNdEx:])
-			if err != nil {
-				return err
-			}
-			if skippy < 0 {
-				return ErrInvalidLengthDiagnosticspb
-			}
-			if (iNdEx + skippy) > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.XXX_unrecognized = append(m.XXX_unrecognized, dAtA[iNdEx:iNdEx+skippy]...)
-			iNdEx += skippy
-		}
-	}
-
-	if iNdEx > l {
-		return io.ErrUnexpectedEOF
-	}
-	return nil
-}
-func (m *SearchHotRegionsResponse) Unmarshal(dAtA []byte) error {
-	l := len(dAtA)
-	iNdEx := 0
-	for iNdEx < l {
-		preIndex := iNdEx
-		var wire uint64
-		for shift := uint(0); ; shift += 7 {
-			if shift >= 64 {
-				return ErrIntOverflowDiagnosticspb
-			}
-			if iNdEx >= l {
-				return io.ErrUnexpectedEOF
-			}
-			b := dAtA[iNdEx]
-			iNdEx++
-			wire |= (uint64(b) & 0x7F) << shift
-			if b < 0x80 {
-				break
-			}
-		}
-		fieldNum := int32(wire >> 3)
-		wireType := int(wire & 0x7)
-		if wireType == 4 {
-			return fmt.Errorf("proto: SearchHotRegionsResponse: wiretype end group for non-group")
-		}
-		if fieldNum <= 0 {
-			return fmt.Errorf("proto: SearchHotRegionsResponse: illegal tag %d (wire type %d)", fieldNum, wire)
-		}
-		switch fieldNum {
-		case 1:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Messages", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowDiagnosticspb
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= (int(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthDiagnosticspb
-			}
-			postIndex := iNdEx + msglen
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.Messages = append(m.Messages, &HotRegionsMessages{})
-			if err := m.Messages[len(m.Messages)-1].Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
-				return err
-			}
-			iNdEx = postIndex
-		default:
-			iNdEx = preIndex
-			skippy, err := skipDiagnosticspb(dAtA[iNdEx:])
-			if err != nil {
-				return err
-			}
-			if skippy < 0 {
-				return ErrInvalidLengthDiagnosticspb
-			}
-			if (iNdEx + skippy) > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.XXX_unrecognized = append(m.XXX_unrecognized, dAtA[iNdEx:iNdEx+skippy]...)
-			iNdEx += skippy
-		}
-	}
-
-	if iNdEx > l {
-		return io.ErrUnexpectedEOF
-	}
-	return nil
-}
-func (m *HotRegionsMessages) Unmarshal(dAtA []byte) error {
-	l := len(dAtA)
-	iNdEx := 0
-	for iNdEx < l {
-		preIndex := iNdEx
-		var wire uint64
-		for shift := uint(0); ; shift += 7 {
-			if shift >= 64 {
-				return ErrIntOverflowDiagnosticspb
-			}
-			if iNdEx >= l {
-				return io.ErrUnexpectedEOF
-			}
-			b := dAtA[iNdEx]
-			iNdEx++
-			wire |= (uint64(b) & 0x7F) << shift
-			if b < 0x80 {
-				break
-			}
-		}
-		fieldNum := int32(wire >> 3)
-		wireType := int(wire & 0x7)
-		if wireType == 4 {
-			return fmt.Errorf("proto: HotRegionsMessages: wiretype end group for non-group")
-		}
-		if fieldNum <= 0 {
-			return fmt.Errorf("proto: HotRegionsMessages: illegal tag %d (wire type %d)", fieldNum, wire)
-		}
-		switch fieldNum {
-		case 1:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field UpdateTime", wireType)
-			}
-			m.UpdateTime = 0
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowDiagnosticspb
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				m.UpdateTime |= (int64(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-		case 2:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field RegionId", wireType)
-			}
-			m.RegionId = 0
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowDiagnosticspb
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				m.RegionId |= (uint64(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-		case 3:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field StoreId", wireType)
-			}
-			m.StoreId = 0
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowDiagnosticspb
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				m.StoreId |= (uint64(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-		case 4:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field HotRegionType", wireType)
-			}
-			m.HotRegionType = 0
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowDiagnosticspb
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				m.HotRegionType |= (HotRegionType(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-		case 5:
-			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field HotDegree", wireType)
-			}
-			var v uint32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
-			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.HotDegree = float32(math.Float32frombits(v))
-		case 6:
-			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field FlowBytes", wireType)
-			}
-			var v uint32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
-			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.FlowBytes = float32(math.Float32frombits(v))
-		case 7:
-			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field KeyRate", wireType)
-			}
-			var v uint32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
-			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.KeyRate = float32(math.Float32frombits(v))
-		case 8:
-			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field QueryRate", wireType)
-			}
-			var v uint32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
-			}
-			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-			iNdEx += 4
-			m.QueryRate = float32(math.Float32frombits(v))
-		case 9:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field StartKey", wireType)
-			}
-			var byteLen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowDiagnosticspb
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				byteLen |= (int(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if byteLen < 0 {
-				return ErrInvalidLengthDiagnosticspb
-			}
-			postIndex := iNdEx + byteLen
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.StartKey = append(m.StartKey[:0], dAtA[iNdEx:postIndex]...)
-			if m.StartKey == nil {
-				m.StartKey = []byte{}
-			}
-			iNdEx = postIndex
-		case 10:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field EndKey", wireType)
-			}
-			var byteLen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowDiagnosticspb
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				byteLen |= (int(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if byteLen < 0 {
-				return ErrInvalidLengthDiagnosticspb
-			}
-			postIndex := iNdEx + byteLen
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.EndKey = append(m.EndKey[:0], dAtA[iNdEx:postIndex]...)
-			if m.EndKey == nil {
-				m.EndKey = []byte{}
-			}
-			iNdEx = postIndex
-		default:
-			iNdEx = preIndex
-			skippy, err := skipDiagnosticspb(dAtA[iNdEx:])
-			if err != nil {
-				return err
-			}
-			if skippy < 0 {
-				return ErrInvalidLengthDiagnosticspb
-			}
-			if (iNdEx + skippy) > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.XXX_unrecognized = append(m.XXX_unrecognized, dAtA[iNdEx:iNdEx+skippy]...)
-			iNdEx += skippy
-		}
-	}
-
-	if iNdEx > l {
-		return io.ErrUnexpectedEOF
-	}
-	return nil
-}
 func skipDiagnosticspb(dAtA []byte) (n int, err error) {
 	l := len(dAtA)
 	iNdEx := 0
@@ -3392,71 +2017,48 @@ var (
 	ErrIntOverflowDiagnosticspb   = fmt.Errorf("proto: integer overflow")
 )
 
-func init() { proto.RegisterFile("diagnosticspb.proto", fileDescriptor_diagnosticspb_49047448da91afd0) }
+func init() { proto.RegisterFile("diagnosticspb.proto", fileDescriptor_diagnosticspb_90b05d2ad5771e76) }
 
-var fileDescriptor_diagnosticspb_49047448da91afd0 = []byte{
-	// 1005 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xa4, 0x56, 0xdf, 0x4f, 0x2b, 0x45,
-	0x14, 0x66, 0xbb, 0xfd, 0xb1, 0x7b, 0x5a, 0xca, 0x3a, 0xde, 0x84, 0x85, 0x2b, 0xdc, 0xde, 0xcd,
-	0x0d, 0x36, 0x24, 0x97, 0x6b, 0x20, 0x26, 0xbe, 0x68, 0x22, 0xa2, 0xa1, 0x82, 0xa8, 0x0b, 0x86,
-	0xe8, 0x4b, 0x33, 0xb0, 0x87, 0xed, 0x86, 0xed, 0x4e, 0x99, 0x99, 0xd2, 0xf4, 0xd1, 0xff, 0xc2,
-	0x77, 0x5f, 0xfc, 0x53, 0x7c, 0xf4, 0xd1, 0x47, 0xc5, 0xbf, 0xc2, 0x37, 0x33, 0x33, 0xdb, 0xed,
-	0x42, 0x85, 0x1b, 0xe3, 0x0b, 0xcc, 0x9c, 0xf3, 0xcd, 0xd9, 0xef, 0xcc, 0xf7, 0xcd, 0x4c, 0xe1,
-	0xdd, 0x28, 0xa1, 0x71, 0xc6, 0x84, 0x4c, 0x2e, 0xc5, 0xe8, 0x62, 0x67, 0xc4, 0x99, 0x64, 0x64,
-	0xf9, 0x5e, 0x70, 0xfd, 0x59, 0xcc, 0x62, 0xa6, 0x33, 0x6f, 0xd4, 0xc8, 0x80, 0xd6, 0x57, 0xf8,
-	0x58, 0x48, 0x3d, 0x34, 0x81, 0xe0, 0x6f, 0x0b, 0xbc, 0x53, 0xa4, 0xfc, 0x72, 0x70, 0xcc, 0xe2,
-	0x10, 0x6f, 0xc6, 0x28, 0x24, 0xd9, 0x00, 0x10, 0x92, 0x72, 0xd9, 0x97, 0xc9, 0x10, 0x7d, 0xab,
-	0x63, 0x75, 0xed, 0xd0, 0xd5, 0x91, 0xb3, 0x64, 0x88, 0x64, 0x0d, 0x1c, 0xcc, 0x22, 0x93, 0xac,
-	0xe8, 0x64, 0x03, 0xb3, 0x48, 0xa7, 0xde, 0x40, 0x3d, 0xc5, 0x5b, 0x4c, 0x85, 0x6f, 0x77, 0xec,
-	0x6e, 0x7b, 0x77, 0x75, 0xe7, 0x3e, 0xd5, 0x63, 0x16, 0x1f, 0xab, 0x7c, 0x98, 0xc3, 0xc8, 0x3a,
-	0x38, 0x23, 0x2a, 0x25, 0xf2, 0x4c, 0xf8, 0xd5, 0x8e, 0xdd, 0x75, 0xc3, 0x62, 0x4e, 0x3e, 0x81,
-	0xba, 0xa4, 0x3c, 0x46, 0xe9, 0xd7, 0x3a, 0x56, 0xb7, 0xbd, 0xbb, 0xf5, 0xa0, 0xd8, 0x43, 0xde,
-	0x3b, 0x67, 0x1a, 0x1d, 0xe6, 0xab, 0x82, 0x4d, 0xa8, 0x9b, 0x08, 0x01, 0xa8, 0x9f, 0x30, 0x3e,
-	0xa4, 0xa9, 0xb7, 0x44, 0x1c, 0xa8, 0x9e, 0xa6, 0x6c, 0xe2, 0x59, 0xc1, 0x97, 0xf0, 0x4e, 0xa9,
-	0x84, 0x18, 0xb1, 0x4c, 0x20, 0xf9, 0x10, 0x9c, 0x21, 0x0a, 0x41, 0x63, 0x14, 0xbe, 0xd5, 0xb1,
-	0xbb, 0xcd, 0xdd, 0xb5, 0xc5, 0x1e, 0xbe, 0x32, 0x88, 0xb0, 0x80, 0x06, 0x09, 0xc0, 0x3c, 0x4e,
-	0x08, 0x54, 0x4b, 0x5b, 0xa7, 0xc7, 0xe4, 0x35, 0xd4, 0x74, 0xcf, 0x7a, 0xcb, 0x9e, 0xd8, 0x19,
-	0x83, 0x22, 0x3e, 0x34, 0xf2, 0xe2, 0xbe, 0xdd, 0xb1, 0xba, 0x6e, 0x38, 0x9b, 0x06, 0xfb, 0x8a,
-	0x36, 0xbf, 0x45, 0xde, 0xcb, 0xae, 0xd8, 0x4c, 0xb2, 0xd7, 0x50, 0x91, 0x23, 0xfd, 0xbd, 0xf6,
-	0xee, 0xc6, 0xc2, 0x3e, 0xcd, 0xd0, 0x67, 0xd3, 0x11, 0x86, 0x15, 0x39, 0x0a, 0x3e, 0x82, 0xf6,
-	0x3c, 0xfa, 0x0d, 0x4d, 0x38, 0xf1, 0xc0, 0xbe, 0xc6, 0xa9, 0xae, 0xe0, 0x86, 0x6a, 0x48, 0x9e,
-	0x41, 0xed, 0x96, 0xa6, 0x63, 0xa3, 0xb1, 0x1b, 0x9a, 0x49, 0x90, 0x94, 0x57, 0xf6, 0x24, 0x0e,
-	0x49, 0xbb, 0xf8, 0xb4, 0xab, 0x6a, 0xab, 0xe6, 0x33, 0x3a, 0x9c, 0x2d, 0xd3, 0x63, 0xb2, 0x07,
-	0xb5, 0x11, 0x4d, 0xb8, 0xb1, 0x45, 0xf3, 0x09, 0x86, 0x8a, 0x4b, 0x68, 0xb0, 0x41, 0x0f, 0x48,
-	0xb9, 0xd1, 0x5c, 0xa0, 0x3d, 0xa8, 0x25, 0x12, 0x87, 0x33, 0x75, 0x1e, 0x2f, 0xa5, 0xc8, 0x85,
-	0x06, 0x1b, 0xfc, 0x58, 0x85, 0x55, 0xa3, 0xf5, 0x21, 0x93, 0x21, 0xc6, 0x09, 0xcb, 0xc4, 0xff,
-	0x77, 0xfb, 0x73, 0x70, 0xb9, 0xae, 0xd5, 0x4f, 0x22, 0xdd, 0x59, 0x35, 0x74, 0x4c, 0xa0, 0x17,
-	0xa9, 0x75, 0x42, 0x32, 0x8e, 0x2a, 0x57, 0xd5, 0xb9, 0x86, 0x9e, 0xf7, 0x22, 0x72, 0x00, 0x2b,
-	0x03, 0x26, 0xfb, 0xf9, 0x5a, 0x39, 0x1d, 0x61, 0xee, 0xf0, 0xf7, 0x1e, 0x34, 0x53, 0x90, 0xd5,
-	0xc2, 0x2d, 0x0f, 0xca, 0x53, 0xf2, 0x0a, 0xda, 0x29, 0x9b, 0xf4, 0x55, 0xa5, 0x08, 0x63, 0x8e,
-	0xe8, 0xd7, 0x3b, 0x56, 0xb7, 0x12, 0xb6, 0x52, 0x36, 0x39, 0x64, 0xf2, 0x40, 0xc7, 0xc8, 0x16,
-	0xac, 0x0c, 0x92, 0x78, 0x50, 0x86, 0x35, 0x34, 0x6c, 0x59, 0x85, 0xe7, 0xb8, 0xbc, 0xda, 0x95,
-	0xfa, 0x73, 0x31, 0x95, 0x28, 0x7c, 0xa7, 0xa8, 0xf6, 0x45, 0xca, 0x26, 0xfb, 0x2a, 0x56, 0x54,
-	0x2b, 0xc1, 0xdc, 0x79, 0xb5, 0x39, 0xae, 0x03, 0x6a, 0x5d, 0xff, 0x1a, 0xa7, 0x7d, 0x4e, 0x25,
-	0xfa, 0xa0, 0x41, 0x90, 0xb2, 0xc9, 0x11, 0x4e, 0x43, 0x2a, 0x91, 0x04, 0xa0, 0x97, 0xcc, 0x21,
-	0x4d, 0x0d, 0x69, 0xaa, 0xe0, 0x0c, 0x93, 0x73, 0xba, 0x19, 0x23, 0xcf, 0x41, 0xad, 0x82, 0xd3,
-	0xb7, 0x2a, 0xa8, 0x51, 0x33, 0x4e, 0x25, 0xd8, 0xf2, 0x9c, 0x53, 0x81, 0x0b, 0xbe, 0x07, 0x7f,
-	0xd1, 0x02, 0xb9, 0xa9, 0x3e, 0x5e, 0x38, 0xf5, 0x2f, 0x1f, 0x93, 0x42, 0xe4, 0x87, 0x5c, 0x94,
-	0x4e, 0xff, 0x9f, 0x15, 0x20, 0x8b, 0x00, 0xf2, 0x02, 0x9a, 0xe3, 0x51, 0x44, 0x25, 0x96, 0xad,
-	0x05, 0x26, 0xb4, 0x68, 0x20, 0x65, 0xae, 0xc7, 0x0c, 0x64, 0xeb, 0xdc, 0x53, 0x06, 0xaa, 0xfe,
-	0x77, 0x03, 0x6d, 0x00, 0x94, 0x5c, 0x51, 0xd3, 0x7b, 0xe6, 0x0e, 0x0a, 0x47, 0x6c, 0x00, 0x94,
-	0x64, 0x36, 0xde, 0x72, 0xaf, 0x0a, 0x89, 0xd7, 0xc0, 0x29, 0xb4, 0x33, 0x8e, 0x6a, 0x5c, 0xe7,
-	0xba, 0x6d, 0x00, 0x94, 0xc4, 0x30, 0x3e, 0x72, 0x6f, 0x0a, 0xc1, 0x9e, 0x83, 0x39, 0x5e, 0x4a,
-	0x7b, 0x6d, 0x9f, 0x56, 0xe8, 0xe8, 0xc0, 0x11, 0x4e, 0xc9, 0x2a, 0xa8, 0xe3, 0xa5, 0x53, 0xa0,
-	0x53, 0x75, 0xcc, 0xa2, 0x23, 0x9c, 0x6e, 0xff, 0x00, 0xce, 0xec, 0x8e, 0x24, 0x4d, 0x68, 0x7c,
-	0x77, 0x72, 0x74, 0xf2, 0xf5, 0xf9, 0x89, 0xb7, 0x44, 0x5c, 0xa8, 0x1d, 0xe0, 0xc5, 0x38, 0xf6,
-	0x2c, 0x75, 0xb7, 0xab, 0x93, 0xef, 0x55, 0xd4, 0xe8, 0x9c, 0xf2, 0xcc, 0xb3, 0x55, 0xfa, 0x8c,
-	0xd3, 0x4b, 0xf4, 0xaa, 0xa4, 0x05, 0xce, 0x67, 0x3c, 0x91, 0xc9, 0x25, 0x4d, 0xbd, 0x9a, 0x4a,
-	0x7c, 0xce, 0x39, 0xe3, 0x5e, 0x7d, 0xbb, 0x57, 0xbe, 0xd4, 0xf4, 0xde, 0x34, 0xc0, 0xfe, 0x34,
-	0x55, 0xcf, 0x85, 0x07, 0xad, 0x43, 0xca, 0xa3, 0x09, 0xe5, 0xa8, 0x4b, 0x5b, 0xa4, 0x0d, 0x70,
-	0x3a, 0x15, 0x12, 0x87, 0xf9, 0xa7, 0x5a, 0x8a, 0x18, 0x8d, 0xf4, 0xcc, 0xde, 0x7e, 0x05, 0xcb,
-	0xf7, 0x36, 0x5d, 0x31, 0x09, 0x91, 0x46, 0x86, 0xe8, 0x39, 0x4f, 0x24, 0x7a, 0xd6, 0xee, 0xcf,
-	0x15, 0x68, 0x1e, 0xcc, 0x95, 0x22, 0xa7, 0x00, 0x42, 0x7b, 0xb3, 0x9f, 0xb2, 0x98, 0xbc, 0x78,
-	0xcb, 0x43, 0xb7, 0xde, 0x79, 0x1c, 0x60, 0x0c, 0x1d, 0x2c, 0x7d, 0x60, 0x91, 0x33, 0x68, 0x0a,
-	0xdd, 0x55, 0x3f, 0xc9, 0xae, 0x18, 0xe9, 0x3c, 0x7a, 0x53, 0xce, 0xca, 0xbe, 0x7c, 0x02, 0x31,
-	0xab, 0x4b, 0x12, 0x20, 0x39, 0xd5, 0xb9, 0x05, 0x05, 0xf9, 0xf7, 0xb7, 0x79, 0xe1, 0xb2, 0x5d,
-	0x7f, 0xff, 0xad, 0xb8, 0x79, 0x03, 0xfb, 0x5b, 0xbf, 0xff, 0xe2, 0x58, 0xbf, 0xde, 0x6d, 0x5a,
-	0xbf, 0xdd, 0x6d, 0x5a, 0x7f, 0xdc, 0x6d, 0x5a, 0x3f, 0xfd, 0xb5, 0xb9, 0x04, 0x1e, 0xe3, 0xf1,
-	0x8e, 0x4c, 0xae, 0x6f, 0x77, 0xae, 0x6f, 0xf5, 0x8f, 0x98, 0x8b, 0xba, 0xfe, 0xb7, 0xf7, 0x4f,
-	0x00, 0x00, 0x00, 0xff, 0xff, 0xd1, 0x59, 0x36, 0xd4, 0x18, 0x09, 0x00, 0x00,
+var fileDescriptor_diagnosticspb_90b05d2ad5771e76 = []byte{
+	// 640 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x84, 0x54, 0xc1, 0x6e, 0xd3, 0x4c,
+	0x10, 0xce, 0xc6, 0x71, 0x62, 0x4f, 0xfa, 0xe7, 0x37, 0x4b, 0x25, 0xdc, 0x48, 0x0d, 0xc6, 0x87,
+	0x2a, 0xaa, 0xd4, 0x14, 0xa5, 0x42, 0xe2, 0x84, 0x44, 0x29, 0x12, 0x81, 0x12, 0x90, 0x13, 0x54,
+	0x89, 0x4b, 0xb5, 0x4d, 0xb6, 0x66, 0x55, 0xdb, 0x6b, 0x76, 0x37, 0xa9, 0xfa, 0x26, 0x3c, 0x02,
+	0x8f, 0xc0, 0x23, 0x70, 0xe4, 0xc8, 0x11, 0x95, 0xa7, 0xe0, 0x86, 0x76, 0x1d, 0xb7, 0x69, 0xab,
+	0x96, 0x93, 0x67, 0x67, 0xbe, 0xfd, 0xf6, 0x9b, 0x6f, 0x46, 0x86, 0xfb, 0x53, 0x46, 0xe2, 0x8c,
+	0x4b, 0xc5, 0x26, 0x32, 0x3f, 0xea, 0xe5, 0x82, 0x2b, 0x8e, 0xff, 0xbb, 0x92, 0x6c, 0xaf, 0xc6,
+	0x3c, 0xe6, 0xa6, 0xb2, 0xad, 0xa3, 0x02, 0xd4, 0xfe, 0x5f, 0xcc, 0xa4, 0x32, 0x61, 0x91, 0x08,
+	0xff, 0x20, 0xf0, 0x46, 0x94, 0x88, 0xc9, 0xa7, 0x7d, 0x1e, 0x47, 0xf4, 0xf3, 0x8c, 0x4a, 0x85,
+	0xd7, 0x01, 0xa4, 0x22, 0x42, 0x1d, 0x2a, 0x96, 0x52, 0x1f, 0x05, 0xa8, 0x6b, 0x45, 0xae, 0xc9,
+	0x8c, 0x59, 0x4a, 0xf1, 0x1a, 0x38, 0x34, 0x9b, 0x16, 0xc5, 0xaa, 0x29, 0x36, 0x68, 0x36, 0x35,
+	0xa5, 0x6d, 0xa8, 0x27, 0x74, 0x4e, 0x13, 0xe9, 0x5b, 0x81, 0xd5, 0x6d, 0xf5, 0x1f, 0xf4, 0xae,
+	0x4a, 0xdd, 0xe7, 0xf1, 0xbe, 0xae, 0x47, 0x0b, 0x18, 0x6e, 0x83, 0x93, 0x13, 0xa5, 0xa8, 0xc8,
+	0xa4, 0x5f, 0x0b, 0xac, 0xae, 0x1b, 0x5d, 0x9c, 0xf1, 0x33, 0xa8, 0x2b, 0x22, 0x62, 0xaa, 0x7c,
+	0x3b, 0x40, 0xdd, 0x56, 0x7f, 0xe3, 0x1a, 0xd9, 0x75, 0xdd, 0xbd, 0xb1, 0x41, 0x47, 0x8b, 0x5b,
+	0x61, 0x07, 0xea, 0x45, 0x06, 0x03, 0xd4, 0x87, 0x5c, 0xa4, 0x24, 0xf1, 0x2a, 0xd8, 0x81, 0xda,
+	0x28, 0xe1, 0xa7, 0x1e, 0x0a, 0x5f, 0xc3, 0xbd, 0x25, 0x0a, 0x99, 0xf3, 0x4c, 0x52, 0xfc, 0x04,
+	0x9c, 0x94, 0x4a, 0x49, 0x62, 0x2a, 0x7d, 0x14, 0x58, 0xdd, 0x66, 0x7f, 0xed, 0x66, 0x0f, 0x6f,
+	0x0b, 0x44, 0x74, 0x01, 0x0d, 0x19, 0xc0, 0x65, 0x1e, 0x63, 0xa8, 0x2d, 0x59, 0x67, 0x62, 0xbc,
+	0x05, 0xb6, 0xe9, 0xd9, 0x58, 0x76, 0x87, 0x33, 0x05, 0x0a, 0xfb, 0xd0, 0x58, 0x90, 0xfb, 0x56,
+	0x80, 0xba, 0x6e, 0x54, 0x1e, 0xc3, 0x5d, 0x2d, 0x5b, 0xcc, 0xa9, 0x18, 0x64, 0xc7, 0xbc, 0x1c,
+	0xd9, 0x16, 0x54, 0x55, 0x6e, 0xde, 0x6b, 0xf5, 0xd7, 0x6f, 0xf8, 0x54, 0xa2, 0xc7, 0x67, 0x39,
+	0x8d, 0xaa, 0x2a, 0x0f, 0x9f, 0x42, 0xeb, 0x32, 0xfb, 0x9e, 0x30, 0x81, 0x3d, 0xb0, 0x4e, 0xe8,
+	0x99, 0x61, 0x70, 0x23, 0x1d, 0xe2, 0x55, 0xb0, 0xe7, 0x24, 0x99, 0x15, 0x33, 0x76, 0xa3, 0xe2,
+	0x10, 0xb2, 0xe5, 0x9b, 0x03, 0x45, 0x53, 0xdc, 0xba, 0x78, 0xda, 0xd5, 0xdc, 0xba, 0xf9, 0x8c,
+	0xa4, 0xe5, 0x35, 0x13, 0xe3, 0x1d, 0xb0, 0x73, 0xc2, 0x44, 0xb1, 0x16, 0xcd, 0x3b, 0x14, 0x6a,
+	0x2d, 0x51, 0x81, 0x0d, 0x07, 0x80, 0x97, 0x1b, 0x5d, 0x0c, 0x68, 0x07, 0x6c, 0xa6, 0x68, 0x5a,
+	0x4e, 0xe7, 0x76, 0x2a, 0x2d, 0x2e, 0x2a, 0xb0, 0x9b, 0x1f, 0xc1, 0x29, 0x0d, 0xc6, 0x4d, 0x68,
+	0x7c, 0x18, 0xbe, 0x19, 0xbe, 0x3b, 0x18, 0x7a, 0x15, 0xec, 0x82, 0xbd, 0x47, 0x8f, 0x66, 0xb1,
+	0x87, 0xf4, 0x62, 0xe8, 0x6b, 0x5e, 0x55, 0x47, 0x07, 0x44, 0x64, 0x9e, 0xa5, 0xcb, 0x63, 0x41,
+	0x26, 0xd4, 0xab, 0xe1, 0x15, 0x70, 0x5e, 0x08, 0xa6, 0xd8, 0x84, 0x24, 0x9e, 0xad, 0x0b, 0x2f,
+	0x85, 0xe0, 0xc2, 0xab, 0x6f, 0x0e, 0x96, 0x1d, 0xd1, 0x0e, 0xe3, 0x06, 0x58, 0xcf, 0x13, 0xbd,
+	0x6b, 0x1e, 0xac, 0xbc, 0x22, 0x62, 0x7a, 0x4a, 0x04, 0x35, 0xd4, 0x08, 0xb7, 0x00, 0x46, 0x67,
+	0x52, 0xd1, 0x74, 0xf1, 0xd4, 0x8a, 0x16, 0x46, 0xa6, 0xe6, 0x64, 0xf5, 0xbf, 0x21, 0x68, 0xee,
+	0x5d, 0xb6, 0x83, 0x47, 0x00, 0xd2, 0x6c, 0xe8, 0x61, 0xc2, 0x63, 0xfc, 0xf0, 0x1f, 0xfb, 0xdf,
+	0x0e, 0x6e, 0x07, 0x14, 0xe6, 0x85, 0x95, 0xc7, 0x08, 0x8f, 0xa1, 0x29, 0x8d, 0xde, 0x43, 0x96,
+	0x1d, 0x73, 0x1c, 0xdc, 0x6a, 0x60, 0x49, 0xfb, 0xe8, 0x0e, 0x44, 0xc9, 0xbb, 0xbb, 0xf1, 0xf3,
+	0xab, 0x83, 0xbe, 0x9f, 0x77, 0xd0, 0x8f, 0xf3, 0x0e, 0xfa, 0x75, 0xde, 0x41, 0x5f, 0x7e, 0x77,
+	0x2a, 0xe0, 0x71, 0x11, 0xf7, 0x14, 0x3b, 0x99, 0xf7, 0x4e, 0xe6, 0xe6, 0x87, 0x73, 0x54, 0x37,
+	0x9f, 0x9d, 0xbf, 0x01, 0x00, 0x00, 0xff, 0xff, 0xb2, 0xba, 0x18, 0xc8, 0xc4, 0x04, 0x00, 0x00,
 }

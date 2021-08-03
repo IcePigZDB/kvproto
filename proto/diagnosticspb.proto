@@ -18,8 +18,8 @@ service Diagnostics {
 	// Retrieves server info in the target node
 	rpc server_info(ServerInfoRequest) returns (ServerInfoResponse) {};
 	// Search tikv hot regions in pd node
-	rpc search_hot_regions(SearchHotRegionsRequest) returns (stream SearchHotRegionsResponse){};
 }
+
 
 enum LogLevel {
 	UNKNOWN = 0;
@@ -93,40 +93,4 @@ message ServerInfoResponse {
 	repeated ServerInfoItem items = 1;
 }
 
-enum HotRegionType { 
-	Read = 0;
-	Write = 1;	
-}
 
-message SearchHotRegionsRequest{
-	int64 start_time = 1;
-	int64 end_time = 2;
-	repeated uint64 region_id = 3;
-	repeated uint64 store_id = 4;
-	HotRegionType hot_region_type = 5;
-	float low_hot_degree = 6;
-	float high_hot_degree = 7;
-	float low_flow_bytes = 8;
-	float high_flow_bytes = 9;
-	float low_key_rate = 10;
-	float high_key_rate = 11;
-	float low_query_rate = 12;
-	float high_query_rate = 13;
-}
-
-message SearchHotRegionsResponse{
-	repeated HotRegionsMessages messages = 1;	
-}
-
-message HotRegionsMessages{
-	int64 update_time = 1;
-	uint64 region_id = 2;
-	uint64 store_id = 3;
-	HotRegionType hot_region_type = 4;
-	float hot_degree = 5;
-	float flow_bytes = 6;
-	float key_rate = 7;
-	float query_rate = 8;
-	bytes start_key = 9; 
-	bytes end_key = 10;
-}
