@@ -1,6 +1,7 @@
 syntax = "proto3";
 package hotregionhistory;
 
+import "encryptionpb.proto";
 import "gogoproto/gogo.proto";
 
 option (gogoproto.sizer_all) = true;
@@ -51,4 +52,9 @@ message HotRegionsMessages{
 	double query_rate = 8;
 	bytes start_key = 9; 
 	bytes end_key = 10;
+	// Encryption metadata for start_key and end_key. encryption_meta.iv is IV for start_key.
+    // IV for end_key is calculated from (encryption_meta.iv + len(start_key)).
+    // The field is only used by PD and should be ignored otherwise.
+    // If encryption_meta is empty (i.e. nil), it means start_key and end_key are unencrypted.
+    encryptionpb.EncryptionMeta encryption_meta = 11;
 }
