@@ -19,6 +19,7 @@ service HotRegionsHistory{
 enum HotRegionType { 
 	Read = 0;
 	Write = 1;	
+	All = 2;
 }
 
 message SearchHotRegionsRequest{
