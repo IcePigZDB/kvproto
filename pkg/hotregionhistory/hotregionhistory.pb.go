@@ -55,7 +55,7 @@ func (x HotRegionType) String() string {
 	return proto.EnumName(HotRegionType_name, int32(x))
 }
 func (HotRegionType) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_hotregionhistory_64959cd46954a1cb, []int{0}
+	return fileDescriptor_hotregionhistory_956d42991b02eeb6, []int{0}
 }
 
 type SearchHotRegionsRequest struct {
@@ -81,7 +81,7 @@ func (m *SearchHotRegionsRequest) Reset()         { *m = SearchHotRegionsRequest
 func (m *SearchHotRegionsRequest) String() string { return proto.CompactTextString(m) }
 func (*SearchHotRegionsRequest) ProtoMessage()    {}
 func (*SearchHotRegionsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_hotregionhistory_64959cd46954a1cb, []int{0}
+	return fileDescriptor_hotregionhistory_956d42991b02eeb6, []int{0}
 }
 func (m *SearchHotRegionsRequest) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -212,7 +212,7 @@ func (m *SearchHotRegionsResponse) Reset()         { *m = SearchHotRegionsRespon
 func (m *SearchHotRegionsResponse) String() string { return proto.CompactTextString(m) }
 func (*SearchHotRegionsResponse) ProtoMessage()    {}
 func (*SearchHotRegionsResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_hotregionhistory_64959cd46954a1cb, []int{1}
+	return fileDescriptor_hotregionhistory_956d42991b02eeb6, []int{1}
 }
 func (m *SearchHotRegionsResponse) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -273,7 +273,7 @@ func (m *HotRegionsMessages) Reset()         { *m = HotRegionsMessages{} }
 func (m *HotRegionsMessages) String() string { return proto.CompactTextString(m) }
 func (*HotRegionsMessages) ProtoMessage()    {}
 func (*HotRegionsMessages) Descriptor() ([]byte, []int) {
-	return fileDescriptor_hotregionhistory_64959cd46954a1cb, []int{2}
+	return fileDescriptor_hotregionhistory_956d42991b02eeb6, []int{2}
 }
 func (m *HotRegionsMessages) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -1656,10 +1656,10 @@ var (
 )
 
 func init() {
-	proto.RegisterFile("hotregionhistory.proto", fileDescriptor_hotregionhistory_64959cd46954a1cb)
+	proto.RegisterFile("hotregionhistory.proto", fileDescriptor_hotregionhistory_956d42991b02eeb6)
 }
 
-var fileDescriptor_hotregionhistory_64959cd46954a1cb = []byte{
+var fileDescriptor_hotregionhistory_956d42991b02eeb6 = []byte{
 	// 631 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x9c, 0x54, 0x51, 0x4e, 0xdb, 0x4a,
 	0x14, 0x65, 0x70, 0x48, 0x9c, 0x1b, 0x02, 0x79, 0xa3, 0xa7, 0x62, 0xa0, 0x09, 0x51, 0x84, 0xaa,

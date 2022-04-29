@@ -43,7 +43,7 @@ func (m *CPUTimeRecord) Reset()         { *m = CPUTimeRecord{} }
 func (m *CPUTimeRecord) String() string { return proto.CompactTextString(m) }
 func (*CPUTimeRecord) ProtoMessage()    {}
 func (*CPUTimeRecord) Descriptor() ([]byte, []int) {
-	return fileDescriptor_resource_usage_agent_623affeb03bbc261, []int{0}
+	return fileDescriptor_resource_usage_agent_34dca46504cf2c1f, []int{0}
 }
 func (m *CPUTimeRecord) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -103,7 +103,7 @@ func (m *EmptyResponse) Reset()         { *m = EmptyResponse{} }
 func (m *EmptyResponse) String() string { return proto.CompactTextString(m) }
 func (*EmptyResponse) ProtoMessage()    {}
 func (*EmptyResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_resource_usage_agent_623affeb03bbc261, []int{1}
+	return fileDescriptor_resource_usage_agent_34dca46504cf2c1f, []int{1}
 }
 func (m *EmptyResponse) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -750,10 +750,10 @@ var (
 )
 
 func init() {
-	proto.RegisterFile("resource_usage_agent.proto", fileDescriptor_resource_usage_agent_623affeb03bbc261)
+	proto.RegisterFile("resource_usage_agent.proto", fileDescriptor_resource_usage_agent_34dca46504cf2c1f)
 }
 
-var fileDescriptor_resource_usage_agent_623affeb03bbc261 = []byte{
+var fileDescriptor_resource_usage_agent_34dca46504cf2c1f = []byte{
 	// 306 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x74, 0x90, 0xc1, 0x4a, 0x33, 0x31,
 	0x14, 0x85, 0x9b, 0xbf, 0x3f, 0x22, 0xc1, 0xa1, 0x25, 0x16, 0xad, 0xb3, 0x18, 0x4a, 0x05, 0x99,
